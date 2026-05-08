@@ -1285,110 +1285,140 @@
 
   /* ============================================================
      MOBILE FIXES — max-width: 768px
-     Only these blocks touch mobile layout; desktop is untouched.
+     Desktop styles are untouched; all overrides live here.
      ============================================================ */
 
   @media (max-width: 768px) {
 
-    /* --- Overflow prevention --- */
+    /* --- Globals --- */
     html { overflow-x: hidden; }
     img  { max-width: 100%; }
+    body { padding-top: 72px; }
 
-    /* Hero banner: disable the full-bleed negative-margin trick on mobile;
-       the container already fills the screen at this width */
-    .hero-banner {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-    }
+    /* Tighter container padding on phones */
+    .container { padding: 0 16px; }
 
-    /* --- Header: switch to fixed so it is always visible --- */
+    /* Hero banner: cancel the full-bleed negative-margin trick —
+       it creates a wider-than-viewport scroll area on mobile */
+    .hero-banner { width: 100%; margin-left: 0; margin-right: 0; }
+
+    /* --- Header: fixed + full-width so it is always visible --- */
     .header {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       z-index: 100;
     }
-    /* Push body content down by the header height (nav = 72px).
-       The announce bar becomes the first visible element below the header
-       and scrolls away naturally. */
-    body {
-      padding-top: 72px;
+
+    /* ── Product grid ─────────────────────────────────────── */
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 16px 12px !important;
+      width: 100%;
+      margin-top: 24px;
     }
 
-    /* --- Product modal: full-screen sheet --- */
+    /* Without min-width:0 a grid cell expands to its content's
+       minimum size, causing the whole grid to overflow the viewport */
+    .pcard { min-width: 0; width: 100%; }
 
-    /* Outer wrapper: remove the 24px desktop padding so the panel can fill
-       the whole screen */
-    #productModal {
-      padding: 0 !important;
+    /* Price row: allow wrapping so long prices don't push the card wide */
+    .pcard .pprice { flex-wrap: wrap; gap: 4px 6px; }
+
+    /* Add-to-cart button: shrink to fit the narrow card.
+       The base .btn rule has white-space:nowrap which forces the button
+       to be ~200px minimum — wider than the ~155px available per column
+       on a 375px phone. */
+    .pcard .card-addcart {
+      font-size:    11px   !important;
+      padding:      9px 8px !important;
+      white-space:  normal !important;
+      line-height:  1.3    !important;
+      gap:          5px    !important;
+    }
+    .pcard .card-addcart svg {
+      width: 13px !important; height: 13px !important; flex-shrink: 0;
     }
 
-    /* Panel: full viewport height, internal scroll, compact padding */
+    /* ── Product modal ────────────────────────────────────── */
+
+    /* Outer wrapper: no padding so panel fills the screen */
+    #productModal { padding: 0 !important; }
+
+    /* Panel: full-screen, internal scroll, no rounding */
     #productModalPanel {
-      max-width:     100%     !important;
-      width:         100%     !important;
-      height:        100dvh   !important;
-      max-height:    100dvh   !important;
-      border-radius: 0        !important;
-      /* 52px top padding = reserved space for the fixed close button */
-      padding:       52px 16px 24px !important;
-      overflow-y:    auto     !important;
-      box-shadow:    none     !important;
+      width:         100%   !important;
+      max-width:     100%   !important;
+      height:        100dvh !important;
+      max-height:    100dvh !important;
+      border-radius: 0      !important;
+      padding:       0      !important;
+      overflow-y:    auto   !important;
+      box-shadow:    none   !important;
     }
 
-    /* Close button: always visible, fixed in top-right corner */
+    /* Close button: fixed to the viewport so it is always visible
+       regardless of scroll position inside the panel */
     #closeProductModal {
-      position:   fixed     !important;
-      top:        12px      !important;
-      right:      12px      !important;
-      z-index:    202       !important;
-      background: var(--bg) !important;
+      position:   fixed         !important;
+      top:        12px          !important;
+      right:      12px          !important;
+      z-index:    202           !important;
+      background: var(--bg)     !important;
       border:     1px solid var(--line) !important;
     }
 
-    /* Modal image: cap height so selectors stay on screen without heavy scroll */
-    #productModalBody .featured-img {
-      aspect-ratio: auto     !important;
-      max-height:   45vh;
-      height:       45vh;
-      overflow:     hidden;
-      border-radius: var(--radius);
-    }
-    #productModalBody .featured-img img {
-      width:        100%;
-      height:       100%;
-      max-height:   45vh;
-      object-fit:   cover;
+    /* Product slide inside modal: force single-column, image first */
+    #productModalBody .product-slide {
+      grid-template-columns: 1fr !important;
+      gap: 0 !important;
+      align-items: start !important;
     }
 
-    /* Thumb rail: hide on mobile to save vertical space */
-    #productModalBody .thumb-rail { display: none; }
+    /* Image: top of modal, full width, 40vh — edge-to-edge */
+    #productModalBody .featured-img {
+      aspect-ratio:  auto !important;
+      width:         100% !important;
+      height:        40vh !important;
+      max-height:    40vh !important;
+      border-radius: 0    !important;
+      overflow:      hidden;
+    }
+    #productModalBody .featured-img img {
+      width:      100%  !important;
+      height:     100%  !important;
+      max-height: 40vh  !important;
+      object-fit: cover !important;
+    }
+
+    /* featured-media container: no extra gap on mobile */
+    #productModalBody .featured-media {
+      gap: 0 !important;
+    }
+    #productModalBody .thumb-rail { display: none !important; }
     #productModalBody .featured-media.has-thumbs {
       grid-template-columns: 1fr !important;
     }
 
-    /* Reduce spacing between action buttons and stock line */
+    /* Text content: padding below image; top padding clears the
+       fixed close button when user scrolls the image away */
+    #productModalBody .product-slide > div:last-child {
+      padding: 16px 16px 32px;
+    }
+
+    /* Action buttons: full width on mobile */
     #productModalBody .actions {
-      gap:     10px !important;
-      row-gap: 10px !important;
+      gap: 10px !important; row-gap: 10px !important;
+    }
+    #productModalBody .actions .btn {
+      width: 100% !important; justify-content: center !important;
     }
     #productModalBody .microcopy { margin-top: 12px !important; }
-
-    /* --- Product grid: 2 cols on mobile (existing 900px rule stays for tablet) --- */
-    .product-grid {
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 20px 14px !important;
-      margin-top: 28px;
-    }
   }
 
-  /* Single column for very small phones */
+  /* Single column on very narrow phones (≤400px) */
   @media (max-width: 400px) {
-    .product-grid {
-      grid-template-columns: 1fr !important;
-    }
+    .product-grid { grid-template-columns: 1fr !important; }
   }
 </style>
 
@@ -2054,9 +2084,9 @@
 
   function openProductModal(i) {
     go(i);
-    // Move the active slide markup into the modal body
     const activeSlide = sliderEl.querySelector('.product-slide.active');
     if (activeSlide) productModalBody.appendChild(activeSlide);
+    productModalPanel.scrollTop = 0; // always start at image, not previous scroll pos
     productModalBackdrop.classList.add('open');
     productModal.setAttribute('aria-hidden', 'false');
     productModal.style.opacity = '1';
