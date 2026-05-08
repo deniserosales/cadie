@@ -110,6 +110,10 @@
 
   .nav-right { display: flex; align-items: center; gap: 14px; }
 
+  /* New elements — hidden by default; mobile block activates them */
+  .nav-ham  { display: none; }
+  .ann-short { display: none; }
+
   /* ===== Buttons ===== */
   .btn {
     display: inline-flex; align-items: center; gap: 10px;
@@ -1414,6 +1418,122 @@
       width: 100% !important; justify-content: center !important;
     }
     #productModalBody .microcopy { margin-top: 12px !important; }
+
+    /* ── Announce bar: short text + tighter sizing ────────── */
+    .announce {
+      font-size:      11px      !important;
+      padding:        6px 12px  !important;
+      letter-spacing: .08em     !important;
+    }
+    .ann-long  { display: none; }
+    .ann-short { display: inline; }
+
+    /* ── Hero image: visible in first viewport ───────────── */
+    .hero-banner img {
+      height:     60vh !important;
+      max-height: 60vh !important;
+    }
+
+    /* ── Header: hamburger left, logo centered, icons right ─ */
+    .nav { position: relative; }
+
+    /* Show hamburger */
+    .nav-ham {
+      display:     flex;
+      align-items: center;
+      justify-content: center;
+      width:  40px;
+      height: 40px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color:  var(--olive-deep);
+      flex-shrink: 0;
+      padding: 0;
+      border-radius: 8px;
+      transition: background .2s ease;
+    }
+    .nav-ham:hover { background: var(--paper); }
+
+    /* Center logo between hamburger and nav-right */
+    .logo {
+      position:  absolute;
+      left:      50%;
+      transform: translateX(-50%);
+    }
+
+    /* ── Mobile drawer menu ──────────────────────────────── */
+    .mobile-menu {
+      position:       fixed;
+      inset:          0;
+      z-index:        150;
+      background:     rgba(43,46,30,.52);
+      opacity:        0;
+      pointer-events: none;
+      transition:     opacity .3s ease;
+    }
+    .mobile-menu.open {
+      opacity:        1;
+      pointer-events: auto;
+    }
+    .mobile-menu-panel {
+      position:   absolute;
+      left: 0; top: 0; bottom: 0;
+      width:      min(300px, 88vw);
+      background: var(--bg);
+      padding:    24px 28px 40px;
+      transform:  translateX(-100%);
+      transition: transform .35s cubic-bezier(.4,0,.2,1);
+      display:    flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    .mobile-menu.open .mobile-menu-panel { transform: translateX(0); }
+
+    /* Close button inside drawer */
+    .menu-close {
+      align-self:  flex-end;
+      width: 38px; height: 38px;
+      background:  transparent;
+      border:      1px solid var(--line);
+      border-radius: 50%;
+      cursor:      pointer;
+      color:       var(--olive-deep);
+      display:     flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 36px;
+      flex-shrink: 0;
+      transition: background .2s ease;
+    }
+    .menu-close:hover { background: var(--paper); }
+
+    /* Nav links — large vertical list */
+    .mobile-nav {
+      display:        flex;
+      flex-direction: column;
+      flex:           1;
+    }
+    .mobile-nav a {
+      font-size:       30px;
+      font-weight:     500;
+      color:           var(--olive-deep);
+      text-decoration: none;
+      letter-spacing:  -.02em;
+      line-height:     1.2;
+      padding:         14px 0;
+      border-bottom:   1px solid var(--line);
+      transition:      color .2s ease, padding-left .25s ease;
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:active     { color: var(--olive); padding-left: 6px; }
+
+    /* WhatsApp CTA at bottom of drawer */
+    .mobile-menu-foot { margin-top: 40px; }
+    .mobile-menu-foot .btn {
+      width: 100%; justify-content: center;
+      font-size: 13px;
+    }
   }
 
   /* Single column on very narrow phones (≤400px) */
@@ -1427,12 +1547,16 @@
 
 <!-- Announcement bar -->
 <div class="announce">
-  <b>Envío gratis</b> en pedidos +$1,500 MXN · Entregas personales en Puebla y Oaxaca, Mx.
+  <span class="ann-long"><b>Envío gratis</b> en pedidos +$1,500 MXN · Entregas personales en Puebla y Oaxaca, Mx.</span>
+  <span class="ann-short"><b>Envío gratis</b> en pedidos +$1,500 MXN</span>
 </div>
 
 <!-- Header -->
 <header class="header" id="header">
   <div class="container nav">
+    <button class="nav-ham" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
     <a href="#" class="logo" aria-label="Cadie Joyería">
       <img src="assets/logo.png" alt="Cadie Joyería" width="685" height="236" decoding="async" />
     </a>
@@ -1454,6 +1578,27 @@
     </div>
   </div>
 </header>
+
+<!-- Mobile nav drawer (shown only at ≤768px via CSS) -->
+<div id="mobileMenu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menú de navegación">
+  <div class="mobile-menu-panel">
+    <button id="menuClose" class="menu-close" aria-label="Cerrar menú">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="mobile-nav">
+      <a href="#featured">Más vendidos</a>
+      <a href="#featured">Colección</a>
+      <a href="#process">Proceso</a>
+      <a href="#gallery">Galería</a>
+    </nav>
+    <div class="mobile-menu-foot">
+      <a class="btn btn-primary" href="https://wa.me/525500000000?text=Hola%20Cadie%20Joyer%C3%ADa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
+        Pedir por WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
 
 <!-- Hero -->
 <section class="hero" id="hero">
@@ -2224,6 +2369,45 @@
   });
 
   // Tweaks panel removed.
+
+  // ===== Mobile hamburger menu =====
+  (function () {
+    const menuBtn   = document.getElementById('menuBtn');
+    const menuClose = document.getElementById('menuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (!menuBtn || !mobileMenu) return;
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    menuBtn.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+
+    // Close when tapping the dark overlay
+    mobileMenu.addEventListener('click', e => {
+      if (e.target === mobileMenu) closeMenu();
+    });
+
+    // Close when a nav link is tapped (scroll then dismiss)
+    mobileMenu.querySelectorAll('.mobile-nav a').forEach(a =>
+      a.addEventListener('click', closeMenu)
+    );
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
+    });
+  })();
 </script>
 
 </body>
