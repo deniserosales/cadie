@@ -1439,9 +1439,10 @@
       pointer-events: none;
     }
     .hero-banner img {
-      height:          55vh   !important;
-      max-height:      55vh   !important;
-      object-position: center !important;
+      height:          60vh        !important;
+      max-height:      60vh        !important;
+      object-fit:      cover       !important;
+      object-position: center top  !important;
     }
 
     /* ── Header: hamburger left, logo centered, icons right ─ */
@@ -1467,13 +1468,28 @@
 
     /* Center logo between hamburger and nav-right */
     .logo {
-      position:  absolute;
-      left:      50%;
-      transform: translateX(-50%);
-      max-width: 120px;
+      position:      absolute;
+      left:          50%;
+      transform:     translateX(-50%);
+      max-width:     90px;
+      background:    none        !important;
+      border-radius: 0           !important;
+      box-shadow:    none        !important;
     }
-    .logo img { height: 32px !important; width: auto !important; }
-    .nav-right { gap: 8px !important; }
+    .logo img { height: 28px !important; width: auto !important; }
+    .nav-right {
+      display:     flex         !important;
+      align-items: center       !important;
+      gap:         8px          !important;
+      flex-shrink: 0;
+    }
+    /* "Pedir" button in header: compact on mobile */
+    .nav-right .btn-sm {
+      padding:   6px 12px !important;
+      font-size: 12px     !important;
+      gap:       5px      !important;
+    }
+    .nav-right .btn-sm svg { width: 14px !important; height: 14px !important; }
 
     /* ── Mobile drawer menu ──────────────────────────────── */
     .mobile-menu {
@@ -1546,6 +1562,15 @@
     .mobile-menu-foot .btn {
       width: 100%; justify-content: center;
       font-size: 13px;
+    }
+
+    /* ── Footer: stacked rows, centered ──────────────────── */
+    .foot-bottom {
+      flex-direction: column  !important;
+      align-items:    center  !important;
+      text-align:     center  !important;
+      gap:            12px    !important;
+      padding:        24px 16px !important;
     }
   }
 
