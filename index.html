@@ -304,7 +304,7 @@
 
   /* ===== Marquee / trust row ===== */
   .trust {
-    background: #636B2F;
+    background: #FDFBF2;
   }
   .trust-row {
     display: grid;
@@ -314,18 +314,18 @@
   .trust-row .cell {
     padding: 22px 20px;
     display: flex; align-items: center; gap: 12px;
-    border-right: 1px solid rgba(255,255,255,.18);
+    border-right: 1px solid var(--line);
     font-size: 12px;
-    color: #F1F0E4;
+    color: var(--olive-deep);
     font-weight: 500;
     letter-spacing: .04em;
   }
   .trust-row .cell:last-child { border-right: none; }
-  .trust-row .cell svg { width: 18px; height: 18px; color: #F1F0E4; flex-shrink: 0; opacity: .85; }
+  .trust-row .cell svg { width: 18px; height: 18px; color: var(--olive-deep); flex-shrink: 0; opacity: .85; }
   @media (max-width: 760px) {
     .trust-row { grid-template-columns: repeat(2, 1fr); }
     .trust-row .cell:nth-child(2) { border-right: none; }
-    .trust-row .cell:nth-child(1), .trust-row .cell:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,.18); }
+    .trust-row .cell:nth-child(1), .trust-row .cell:nth-child(2) { border-bottom: 1px solid var(--line); }
   }
 
   /* ===== Section scaffolding ===== */
@@ -1574,30 +1574,30 @@
     .trust         { margin-top: 0 !important; }
 
     /* ── Trust grid: 2×2 block with border separators ───── */
-    .trust { background: #636B2F !important; color: #F1F0E4 !important; }
+    .trust { background: #FDFBF2 !important; color: var(--olive-deep) !important; }
     .trust-row {
       grid-template-columns: 1fr 1fr !important;
       gap:         0                 !important;
       align-items: stretch           !important;
     }
     .trust-row .cell {
-      min-height:    56px                             !important;
-      font-size:     13px                             !important;
-      line-height:   1.4                              !important;
-      padding:       10px 12px                        !important;
-      align-items:   center                           !important;
-      border-right:  1px solid rgba(255,255,255,.18)  !important;
-      border-bottom: none                             !important;
-      color:         #F1F0E4                          !important;
+      min-height:    56px                          !important;
+      font-size:     13px                          !important;
+      line-height:   1.4                           !important;
+      padding:       10px 12px                     !important;
+      align-items:   center                        !important;
+      border-right:  1px solid var(--line)         !important;
+      border-bottom: none                          !important;
+      color:         var(--olive-deep)             !important;
     }
     .trust-row .cell svg {
-      width:  20px    !important;
-      height: 20px    !important;
-      color:  #F1F0E4 !important;
+      width:  20px              !important;
+      height: 20px              !important;
+      color:  var(--olive-deep) !important;
     }
     /* Row 1 (cells 1&2) get a bottom separator */
     .trust-row .cell:nth-child(1),
-    .trust-row .cell:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,.18) !important; }
+    .trust-row .cell:nth-child(2) { border-bottom: 1px solid var(--line) !important; }
     /* Right-column cells (2&4) — no right border */
     .trust-row .cell:nth-child(2),
     .trust-row .cell:nth-child(4) { border-right: none !important; }
