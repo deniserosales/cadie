@@ -1282,6 +1282,114 @@
     --ink: #1B2A22;
     --muted: #5E7566;
   }
+
+  /* ============================================================
+     MOBILE FIXES — max-width: 768px
+     Only these blocks touch mobile layout; desktop is untouched.
+     ============================================================ */
+
+  @media (max-width: 768px) {
+
+    /* --- Overflow prevention --- */
+    html { overflow-x: hidden; }
+    img  { max-width: 100%; }
+
+    /* Hero banner: disable the full-bleed negative-margin trick on mobile;
+       the container already fills the screen at this width */
+    .hero-banner {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    /* --- Header: switch to fixed so it is always visible --- */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+    /* Push body content down by the header height (nav = 72px).
+       The announce bar becomes the first visible element below the header
+       and scrolls away naturally. */
+    body {
+      padding-top: 72px;
+    }
+
+    /* --- Product modal: full-screen sheet --- */
+
+    /* Outer wrapper: remove the 24px desktop padding so the panel can fill
+       the whole screen */
+    #productModal {
+      padding: 0 !important;
+    }
+
+    /* Panel: full viewport height, internal scroll, compact padding */
+    #productModalPanel {
+      max-width:     100%     !important;
+      width:         100%     !important;
+      height:        100dvh   !important;
+      max-height:    100dvh   !important;
+      border-radius: 0        !important;
+      /* 52px top padding = reserved space for the fixed close button */
+      padding:       52px 16px 24px !important;
+      overflow-y:    auto     !important;
+      box-shadow:    none     !important;
+    }
+
+    /* Close button: always visible, fixed in top-right corner */
+    #closeProductModal {
+      position:   fixed     !important;
+      top:        12px      !important;
+      right:      12px      !important;
+      z-index:    202       !important;
+      background: var(--bg) !important;
+      border:     1px solid var(--line) !important;
+    }
+
+    /* Modal image: cap height so selectors stay on screen without heavy scroll */
+    #productModalBody .featured-img {
+      aspect-ratio: auto     !important;
+      max-height:   45vh;
+      height:       45vh;
+      overflow:     hidden;
+      border-radius: var(--radius);
+    }
+    #productModalBody .featured-img img {
+      width:        100%;
+      height:       100%;
+      max-height:   45vh;
+      object-fit:   cover;
+    }
+
+    /* Thumb rail: hide on mobile to save vertical space */
+    #productModalBody .thumb-rail { display: none; }
+    #productModalBody .featured-media.has-thumbs {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Reduce spacing between action buttons and stock line */
+    #productModalBody .actions {
+      gap:     10px !important;
+      row-gap: 10px !important;
+    }
+    #productModalBody .microcopy { margin-top: 12px !important; }
+
+    /* --- Product grid: 2 cols on mobile (existing 900px rule stays for tablet) --- */
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 20px 14px !important;
+      margin-top: 28px;
+    }
+  }
+
+  /* Single column for very small phones */
+  @media (max-width: 400px) {
+    .product-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
 </style>
 
 </head>
