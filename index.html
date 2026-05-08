@@ -1429,12 +1429,11 @@
     .ann-short { display: inline; }
 
     /* ── Hero image ─────────────────────────────────────── */
-    /* Height on the container; img fills it with object-fit */
     .hero-banner {
-      position:   relative  !important;
-      height:     56vh      !important;
-      max-height: 56vh      !important;
-      overflow:   hidden    !important;
+      position:   relative !important;
+      height:     auto     !important;
+      max-height: 60vh     !important;
+      overflow:   hidden   !important;
     }
     .hero-banner::after {
       content:        '';
@@ -1444,11 +1443,13 @@
       pointer-events: none;
       z-index:        1;
     }
+    /* contain: show full image without crop; height auto = natural ratio */
     .hero-banner img {
-      width:           100%        !important;
-      height:          100%        !important;
-      object-fit:      cover       !important;
-      object-position: center top  !important;
+      width:      100%    !important;
+      height:     auto    !important;
+      max-height: 60vh    !important;
+      object-fit: contain !important;
+      display:    block   !important;
     }
 
     /* ── Header: hamburger left, logo centered, icons right ─ */
@@ -1661,7 +1662,7 @@
 <!-- Hero -->
 <section class="hero" id="hero">
   <div class="hero-banner reveal">
-    <img src="assets/hero-banner.png" alt="Anillos Cadie en la mano" width="1366" height="768" fetchpriority="high" decoding="async" />
+    <img src="assets/hero-banner.webp" alt="Anillos Cadie en la mano" width="1366" height="768" fetchpriority="high" decoding="async" />
   </div>
 </section>
 
