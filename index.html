@@ -2015,7 +2015,7 @@
   </div>
   <div class="drawer-foot" id="drawerFoot" style="display:none">
     <div class="row"><span>Subtotal</span><span class="total" id="cartTotal">$0</span></div>
-    <a class="btn btn-primary" href="https://wa.me/522202513945?text=Hola%2C%20quiero%20pedir%20lo%20siguiente" target="_blank" rel="noopener">
+    <a id="checkoutBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
       Finalizar por WhatsApp
     </a>
@@ -2484,6 +2484,15 @@
   const drawerFoot = document.getElementById('drawerFoot');
   const cartTotal = document.getElementById('cartTotal');
   const cartDot = document.getElementById('cartDot');
+  const checkoutBtn = document.getElementById('checkoutBtn');
+
+  function buildCartMsg() {
+    const lines = cart.map(item =>
+      `• ${item.name} — ${item.color} · Talla ${item.size} · Cant. ${item.qty} — $${item.price * item.qty}`
+    ).join('\n');
+    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+    return `Hola ✨ Me gustaría realizar un pedido de los siguientes:\n\n${lines}\n\nTotal: $${total}`;
+  }
 
   let cart = [];
 
@@ -2547,6 +2556,7 @@
     `).join('');
     const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
     cartTotal.textContent = '$' + total;
+    checkoutBtn.href = `https://wa.me/522202513945?text=${encodeURIComponent(buildCartMsg())}`;
     drawerFoot.style.display = 'block';
     cartDot.style.display = 'block';
     drawerBody.querySelectorAll('button').forEach(b => {
