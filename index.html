@@ -2025,6 +2025,7 @@
     {
       id: 'margarita',
       name: 'Anillo Margarita',
+      cardImg: 'assets/ring-tray-1.webp',
       img: 'assets/ring-tray.webp',
       lede: 'Anillo artesanal de flores con cuentas de en tonos pastel y detalles de chapa de oro. Hecho a la medida, cómodo, y ligero',
       price: 52, priceOld: 69, tag: '-25%',
@@ -2051,6 +2052,7 @@
     {
       id: 'aura',
       name: 'Anillo Aura',
+      cardImg: 'assets/rings-stones-1.webp',
       img: 'assets/rings-stones.webp',
       lede: 'Tu cuarzo favorito tejido a mano en un diseño minimalista. Disponible en alambre dorado y plateado.',
       price: 47, priceOld: 52, tag: '-10%',
@@ -2076,6 +2078,7 @@
     {
       id: 'trenza',
       name: 'Anillo Trenza',
+      cardImg: 'assets/ring-trenza-1.webp',
       img: 'assets/ring-trenza.webp',
       lede: 'Anillo artesanal minimalista con cuentas metálicas y diseño trenzado, disponible en acabado dorado y plateado. Ligero y minimalista ideal para uso diario.',
       price: 48, priceOld: 56, tag: '-15%',
@@ -2137,7 +2140,7 @@
       <article class="pcard" data-i="${i}">
         <div class="img-wrap" data-open="${i}">
           <span class="pbadge">${p.tag}</span>
-          <img src="${p.img}" alt="${p.name}" width="800" height="800" loading="lazy" decoding="async" />
+          <img src="${p.cardImg || p.img}" alt="${p.name}" width="800" height="1000" loading="lazy" decoding="async" />
         </div>
         <h3>${p.name}</h3>
         <div class="pprice" style="display:flex; align-items:baseline; gap:10px; margin-bottom:14px;">
