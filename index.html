@@ -2041,7 +2041,14 @@
   </div>
 </div>
 
-
+<!-- Cart toast — must be before <script> so getElementById finds it at parse time -->
+<div id="cart-toast" role="status" aria-live="polite">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toast-msg"></span>
+  <button id="toast-close" aria-label="Cerrar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
 
 <script>
   // Tweaks defaults
@@ -2644,14 +2651,6 @@
     });
   })();
 </script>
-
-<div id="cart-toast" role="status" aria-live="polite">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
-  <span id="toast-msg"></span>
-  <button id="toast-close" aria-label="Cerrar">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-  </button>
-</div>
 
 </body>
 </html>
