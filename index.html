@@ -2338,7 +2338,7 @@
 
   function go(i) {
     current = (i + PRODUCTS.length) % PRODUCTS.length;
-    sliderEl.querySelectorAll('.product-slide').forEach((s, idx) => s.classList.toggle('active', idx === current));
+    sliderEl.querySelectorAll('.product-slide').forEach(s => s.classList.toggle('active', +s.dataset.i === current));
   }
 
   // ===== Product modal =====
