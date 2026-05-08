@@ -363,12 +363,12 @@
   .featured { background: var(--paper); }
   .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 36px 28px;
     margin-top: 48px;
   }
   @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; } }
-  @media (max-width: 560px) { .product-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
   .pcard { display: flex; flex-direction: column; cursor: pointer; }
   .pcard .img-wrap {
     position: relative; aspect-ratio: 4/5;
@@ -1644,9 +1644,9 @@
     }
   }
 
-  /* Single column on very narrow phones (≤400px) */
+  /* Two columns preserved on very narrow phones (≤400px) for 2×2 layout */
   @media (max-width: 400px) {
-    .product-grid { grid-template-columns: 1fr !important; }
+    .product-grid { grid-template-columns: repeat(2, 1fr) !important; }
   }
 </style>
 
@@ -2097,6 +2097,27 @@
         { t: 'Cuidados', d: 'Evita cremas y perfume directo. Limpia con paño seco.' },
       ],
       stock: 4,
+    },
+    {
+      id: 'estrellas',
+      name: 'Anillo Tres Estrellas',
+      cardImg: 'assets/ring-star-1.webp',
+      img: 'assets/ring-star.webp',
+      lede: 'Anillo artesanal bordado a mano con diseño de tres estrellas. Ligero, cómodo y elaborado en alambre dorado o plateado. Ideal para un estilo minimalista y elegante.',
+      price: 47,
+      colors: [
+        { name: 'Dorado', hex: '#D4AF6A' },
+        { name: 'Plateado', hex: '#C7C7C7' },
+      ],
+      sizes: ['4','5','6','7','8','9'],
+      disabledSizes: [],
+      specs: [
+        { t: 'Material', d: 'Alambre en acabado dorado o plateado. Apto para pieles sensibles.' },
+        { t: 'Diseño', d: 'Tres estrellas bordadas a mano, una por una en el taller.' },
+        { t: 'Tallas', d: 'De la 4 a la 9.' },
+        { t: 'Cuidados', d: 'Evita cremas y perfume directo. Limpia con paño seco.' },
+      ],
+      stock: 5,
     },
   ];
 
