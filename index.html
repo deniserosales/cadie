@@ -1486,13 +1486,20 @@
       gap:         8px          !important;
       flex-shrink: 0;
     }
-    /* "Pedir" button in header: compact on mobile */
+    /* "Pedir" button in header: icon-only circle on mobile */
     .nav-right .btn-sm {
-      padding:   6px 12px !important;
-      font-size: 12px     !important;
-      gap:       5px      !important;
+      width:           40px !important;
+      height:          40px !important;
+      padding:         0    !important;
+      border-radius:   50%  !important;
+      font-size:       0    !important;
+      display:         flex !important;
+      align-items:     center !important;
+      justify-content: center !important;
+      gap:             0    !important;
+      flex-shrink:     0;
     }
-    .nav-right .btn-sm svg { width: 14px !important; height: 14px !important; }
+    .nav-right .btn-sm svg { width: 18px !important; height: 18px !important; flex-shrink: 0; }
 
     /* ── Mobile drawer menu ──────────────────────────────── */
     .mobile-menu {
