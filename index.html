@@ -2214,7 +2214,7 @@
     color: DEFAULT_COLOR[p.id] || 0,
     selectedColors: p.multiColor ? [DEFAULT_COLOR[p.id] || 0] : null,
     size: 3,
-    metal: 0
+    metals: [0]
   }));
   let current = 0;
 
@@ -2311,7 +2311,7 @@
           <div class="metal-picker">
             <span class="label">Metal</span>
             <div class="pills metals" data-p="${i}">
-              ${METALS.map((m,mi)=>`<button data-mi="${mi}" class="${mi===state[i].metal?'active':''}" aria-label="${m.name}">${m.name}</button>`).join('')}
+              ${METALS.map((m,mi)=>`<button data-mi="${mi}" class="${state[i].metals.includes(mi)?'active':''}" aria-label="${m.name}">${m.name}</button>`).join('')}
             </div>
           </div>
           <div class="actions" style="display:flex; gap:8px; flex-wrap:wrap; row-gap:8px;">
@@ -2379,9 +2379,17 @@
     sliderEl.querySelectorAll('.metals').forEach(w => {
       w.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
         const pi = +w.dataset.p, mi = +b.dataset.mi;
-        state[pi].metal = mi;
-        w.querySelectorAll('button').forEach(x => x.classList.remove('active'));
-        b.classList.add('active');
+        const arr = state[pi].metals;
+        const idx = arr.indexOf(mi);
+        if (idx > -1) {
+          if (arr.length > 1) arr.splice(idx, 1);
+        } else {
+          arr.push(mi);
+          arr.sort((a, z) => a - z);
+        }
+        w.querySelectorAll('button').forEach((x, xi) =>
+          x.classList.toggle('active', arr.includes(xi))
+        );
         updateWaLinks();
       }));
     });
@@ -2413,7 +2421,7 @@
       const colorStr = p.multiColor
         ? s.selectedColors.map(i => p.colors[i].name).join(', ')
         : p.colors[s.color].name;
-      a.href = waHref(p, colorStr, p.sizes[s.size], METALS[s.metal].name);
+      a.href = waHref(p, colorStr, p.sizes[s.size], s.metals.map(i => METALS[i].name).join(', '));
     });
   }
 
