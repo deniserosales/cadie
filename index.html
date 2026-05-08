@@ -304,7 +304,7 @@
 
   /* ===== Marquee / trust row ===== */
   .trust {
-    background: var(--paper);
+    background: #F5F3E8;
   }
   .trust-row {
     display: grid;
@@ -672,14 +672,10 @@
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
     padding: 28px 24px;
-    transition: all .3s ease;
     position: relative;
     overflow: hidden;
-  }
-  .spec-card:hover {
-    background: #F5F3E8;
-    border-color: var(--sage);
-    transform: translateY(-2px);
+    cursor: default;
+    pointer-events: none;
   }
   .spec-card .icon {
     width: 44px; height: 44px; border-radius: 12px;
@@ -687,9 +683,7 @@
     display: inline-flex; align-items: center; justify-content: center;
     color: var(--olive-deep);
     margin-bottom: 20px;
-    transition: background .3s ease;
   }
-  .spec-card:hover .icon { background: var(--sage); }
   .spec-card .icon svg { width: 22px; height: 22px; stroke-width: 1.6; }
   .spec-card h4 {
     margin: 0 0 8px;
@@ -1580,8 +1574,8 @@
     .trust         { margin-top: 0 !important; }
 
     /* ── Trust grid: 2×2 block with border separators ───── */
-    /* Light paper bg differentiates from the dark announce bar above */
-    .trust { background: var(--paper) !important; color: var(--ink) !important; }
+    /* Same bg as spec-card hover state — warm off-white, clearly lighter than announce bar */
+    .trust { background: #F5F3E8 !important; color: var(--ink) !important; }
     .trust-row {
       grid-template-columns: 1fr 1fr !important;
       gap:         0                 !important;
