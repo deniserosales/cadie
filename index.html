@@ -1428,10 +1428,20 @@
     .ann-long  { display: none; }
     .ann-short { display: inline; }
 
-    /* ── Hero image: visible in first viewport ───────────── */
+    /* ── Hero image ─────────────────────────────────────── */
+    /* Overlay wrapper (img can't use ::after, the div can) */
+    .hero-banner { position: relative; }
+    .hero-banner::after {
+      content:        '';
+      position:       absolute;
+      inset:          0;
+      background:     rgba(0,0,0,.08);
+      pointer-events: none;
+    }
     .hero-banner img {
-      height:     60vh !important;
-      max-height: 60vh !important;
+      height:          55vh   !important;
+      max-height:      55vh   !important;
+      object-position: center !important;
     }
 
     /* ── Header: hamburger left, logo centered, icons right ─ */
@@ -1460,7 +1470,10 @@
       position:  absolute;
       left:      50%;
       transform: translateX(-50%);
+      max-width: 120px;
     }
+    .logo img { height: 32px !important; width: auto !important; }
+    .nav-right { gap: 8px !important; }
 
     /* ── Mobile drawer menu ──────────────────────────────── */
     .mobile-menu {
@@ -1515,13 +1528,13 @@
       flex:           1;
     }
     .mobile-nav a {
-      font-size:       30px;
+      font-size:       18px;
       font-weight:     500;
       color:           var(--olive-deep);
       text-decoration: none;
-      letter-spacing:  -.02em;
+      letter-spacing:  -.01em;
       line-height:     1.2;
-      padding:         14px 0;
+      padding:         16px 0;
       border-bottom:   1px solid var(--line);
       transition:      color .2s ease, padding-left .25s ease;
     }
