@@ -1571,6 +1571,42 @@
       font-size: 13px;
     }
 
+    /* ── Hero: kill the 900px-rule padding-bottom: 48px ──── */
+    .hero          { padding: 0 !important; margin-bottom: 0 !important; }
+    .hero-banner   { margin-bottom: 0 !important; }
+    .trust         { margin-top: 0 !important; }
+
+    /* ── Trust grid: 2×2 block with border separators ───── */
+    /* Background matches .process (both use var(--olive-deep)) */
+    .trust { background: var(--olive-deep) !important; color: #F1F0E4 !important; }
+    .trust-row {
+      grid-template-columns: 1fr 1fr  !important;
+      gap:         0                  !important;
+      align-items: stretch            !important;
+    }
+    .trust-row .cell {
+      min-height:   80px                              !important;
+      font-size:    13px                              !important;
+      line-height:  1.4                               !important;
+      padding:      16px 14px                         !important;
+      align-items:  center                            !important;
+      border-right: 1px solid rgba(241,240,228,.18)   !important;
+      border-bottom: none                             !important;
+    }
+    .trust-row .cell svg {
+      width:  20px !important;
+      height: 20px !important;
+    }
+    /* Row 1 (cells 1&2) get a bottom separator */
+    .trust-row .cell:nth-child(1),
+    .trust-row .cell:nth-child(2) { border-bottom: 1px solid rgba(241,240,228,.18) !important; }
+    /* Right-column cells (2&4) — no right border */
+    .trust-row .cell:nth-child(2),
+    .trust-row .cell:nth-child(4) { border-right: none !important; }
+    /* Row 2 (cells 3&4) — no bottom border */
+    .trust-row .cell:nth-child(3),
+    .trust-row .cell:nth-child(4) { border-bottom: none !important; }
+
     /* ── Footer: stacked rows, centered ──────────────────── */
     .foot-bottom {
       display:         flex      !important;
