@@ -1429,18 +1429,24 @@
     .ann-short { display: inline; }
 
     /* ── Hero image ─────────────────────────────────────── */
-    /* Overlay wrapper (img can't use ::after, the div can) */
-    .hero-banner { position: relative; }
+    /* Height on the container; img fills it with object-fit */
+    .hero-banner {
+      position:   relative  !important;
+      height:     56vh      !important;
+      max-height: 56vh      !important;
+      overflow:   hidden    !important;
+    }
     .hero-banner::after {
       content:        '';
       position:       absolute;
       inset:          0;
       background:     rgba(0,0,0,.08);
       pointer-events: none;
+      z-index:        1;
     }
     .hero-banner img {
-      height:          60vh        !important;
-      max-height:      60vh        !important;
+      width:           100%        !important;
+      height:          100%        !important;
       object-fit:      cover       !important;
       object-position: center top  !important;
     }
@@ -1466,17 +1472,17 @@
     }
     .nav-ham:hover { background: var(--paper); }
 
-    /* Center logo between hamburger and nav-right */
-    .logo {
+    /* Center logo between hamburger and nav-right (header only) */
+    .nav .logo {
       position:      absolute;
       left:          50%;
       transform:     translateX(-50%);
       max-width:     90px;
-      background:    none        !important;
-      border-radius: 0           !important;
-      box-shadow:    none        !important;
+      background:    none !important;
+      border-radius: 0    !important;
+      box-shadow:    none !important;
     }
-    .logo img { height: 28px !important; width: auto !important; }
+    .nav .logo img { height: 28px !important; width: auto !important; }
     .nav-right {
       display:     flex         !important;
       align-items: center       !important;
@@ -1566,11 +1572,25 @@
 
     /* ── Footer: stacked rows, centered ──────────────────── */
     .foot-bottom {
-      flex-direction: column  !important;
-      align-items:    center  !important;
-      text-align:     center  !important;
-      gap:            12px    !important;
-      padding:        24px 16px !important;
+      display:         flex      !important;
+      flex-direction:  column    !important;
+      align-items:     center    !important;
+      justify-content: center    !important;
+      gap:             16px      !important;
+      padding:         32px 20px !important;
+      text-align:      center    !important;
+    }
+    /* Footer logo: remove any positioning that pulls it out of flow */
+    .foot-bottom .logo {
+      position:  static !important;
+      transform: none   !important;
+      display:   block  !important;
+      max-width: none   !important;
+    }
+    .foot-bottom .logo img {
+      display: block  !important;
+      height:  28px   !important;
+      width:   auto   !important;
     }
   }
 
