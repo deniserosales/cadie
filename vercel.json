@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/anillos/:slug/", "destination": "/anillos/" }
+  ]
+}
