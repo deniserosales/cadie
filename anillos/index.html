@@ -3,31 +3,37 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cadie Joyería | Anillos Artesanales Hechos a Mano | México</title>
-<meta name="description" content="Anillos artesanales hechos a mano con cuarzos y piedras naturales. Envío a todo México, entregas personales en Puebla y Oaxaca. Pídelos por WhatsApp.">
-<link rel="canonical" href="https://cadiejoyeria.com/">
+<title>Anillos Artesanales Hechos a Mano | Cadie Joyería</title>
+<meta name="description" content="Explora todos nuestros anillos artesanales hechos a mano con cuarzos y piedras naturales. Envío a todo México, entregas personales en Puebla y Oaxaca.">
+<link rel="canonical" href="https://cadiejoyeria.com/anillos/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://cadiejoyeria.com/">
-<meta property="og:title" content="Cadie Joyería | Anillos Artesanales Hechos a Mano | México">
-<meta property="og:description" content="Anillos artesanales hechos a mano con cuarzos y piedras naturales. Envío a todo México, entregas personales en Puebla y Oaxaca. Pídelos por WhatsApp.">
+<meta property="og:url" content="https://cadiejoyeria.com/anillos/">
+<meta property="og:title" content="Anillos Artesanales Hechos a Mano | Cadie Joyería">
+<meta property="og:description" content="Explora todos nuestros anillos artesanales hechos a mano con cuarzos y piedras naturales. Envío a todo México, entregas personales en Puebla y Oaxaca.">
 <meta property="og:image" content="https://cadiejoyeria.com/assets/hero-banner.webp">
 <meta property="og:locale" content="es_MX">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Cadie Joyería",
-  "url": "https://cadiejoyeria.com",
-  "logo": "https://cadiejoyeria.com/assets/logo.webp",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+52-220-251-3945",
-    "contactType": "customer service"
-  },
-  "sameAs": ["https://www.instagram.com/cadie_jewelry"]
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://cadiejoyeria.com/anillos/",
+      "name": "Anillos Artesanales Hechos a Mano",
+      "description": "Colección de anillos artesanales hechos a mano con cuarzos y piedras naturales, envío a todo México.",
+      "url": "https://cadiejoyeria.com/anillos/",
+      "isPartOf": { "@id": "https://cadiejoyeria.com/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://cadiejoyeria.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Anillos", "item": "https://cadiejoyeria.com/anillos/" }
+      ]
+    }
+  ]
 }
 </script>
-<meta name="google-site-verification" content="lglhc6hUtlvWM-2S2ZDmj4gISnjJeyxHJ9-clw9ceRg" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -35,7 +41,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
@@ -1745,6 +1750,64 @@
     #cart-toast.visible  { transform: translateX(-50%) translateY(0); }
     #cart-toast.hiding   { transform: translateX(-50%) translateY(-12px); }
   }
+
+  /* ===== Anillos catalog page ===== */
+  .nav-links a.active::after { transform: scaleX(1); }
+
+  .breadcrumb {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 11px 0;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .breadcrumb a { color: var(--olive); text-decoration: none; font-weight: 500; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { margin: 0 8px; opacity: .5; }
+
+  .catalog-header { padding: 56px 0 40px; }
+  .catalog-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: clamp(26px, 3.2vw, 34px);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    color: var(--olive-deep);
+    margin: 0 0 16px;
+    text-wrap: balance;
+  }
+  .catalog-header p {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 560px;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .catalog-section { padding: 0 0 96px; }
+  @media (max-width: 700px) { .catalog-section { padding: 0 0 64px; } }
+
+  .catalog-seo-text { padding: 64px 0 96px; border-top: 1px solid var(--line); }
+  .catalog-seo-text p {
+    font-size: 14px;
+    color: var(--muted);
+    max-width: 760px;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  .product-detail-link {
+    display: inline-block;
+    font-size: 12px;
+    color: var(--olive);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .05em;
+    margin-top: 10px;
+    transition: color .2s ease;
+  }
+  .product-detail-link:hover { color: var(--olive-deep); text-decoration: underline; }
+
 </style>
 
 </head>
@@ -1763,14 +1826,14 @@
       <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <a href="/" class="logo" aria-label="Cadie Joyería">
-      <img src="assets/logo.webp" alt="Cadie Joyería" width="685" height="236" decoding="async" />
+      <img src="../assets/logo.webp" alt="Cadie Joyería" width="685" height="236" decoding="async" />
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="/anillos/">Anillos</a>
-      <a href="#featured">Más vendidos</a>
-      <a href="#process">Proceso</a>
-      <a href="#gallery">Galería</a>
-      <a href="significado-de-piedras.html">Piedras</a>
+      <a href="/anillos/" class="active">Anillos</a>
+      <a href="/#featured">Más vendidos</a>
+      <a href="/#process">Proceso</a>
+      <a href="/#gallery">Galería</a>
+      <a href="/significado-de-piedras.html">Piedras</a>
     </nav>
     <div class="nav-right">
       <button class="iconbtn" id="openCart" aria-label="Carrito">
@@ -1785,18 +1848,18 @@
   </div>
 </header>
 
-<!-- Mobile nav drawer (shown only at ≤768px via CSS) -->
+<!-- Mobile nav drawer -->
 <div id="mobileMenu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menú de navegación">
   <div class="mobile-menu-panel">
     <button id="menuClose" class="menu-close" aria-label="Cerrar menú">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
     <nav class="mobile-nav">
-      <a href="/anillos/">Anillos</a>
-      <a href="#featured">Más vendidos</a>
-      <a href="#process">Proceso</a>
-      <a href="#gallery">Galería</a>
-      <a href="significado-de-piedras.html">Piedras</a>
+      <a href="/anillos/" style="color:var(--olive); font-weight:600;">Anillos</a>
+      <a href="/#featured">Más vendidos</a>
+      <a href="/#process">Proceso</a>
+      <a href="/#gallery">Galería</a>
+      <a href="/significado-de-piedras.html">Piedras</a>
     </nav>
     <div class="mobile-menu-foot">
       <a class="btn btn-primary" href="https://wa.me/522202513945?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20una%20de%20sus%20piezas.%20%C2%BFPodr%C3%ADan%20ayudarme%3F%20%E2%9C%A8" target="_blank" rel="noopener">
@@ -1807,215 +1870,44 @@
   </div>
 </div>
 
-<!-- Hero -->
-<section class="hero" id="hero">
-  <div class="hero-banner reveal">
-    <img src="assets/hero-banner.webp" alt="Anillos Cadie en la mano" width="1366" height="768" fetchpriority="high" decoding="async" />
-  </div>
-</section>
-
-<!-- Trust -->
-<div class="trust">
+<!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="container">
-    <div class="trust-row">
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5Z"/></svg>
-        Calidad y durabilidad
-      </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
-        Empaque de regalo
-      </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-4 8-8 8-13a8 8 0 0 0-16 0c0 5 4 9 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
-        Envío a todo MX
-      </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 10V4a2 2 0 0 0-4 0v6"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
-        Hecho a mano
-      </div>
-    </div>
+    <a href="/">Inicio</a><span class="sep">/</span><span>Anillos</span>
+  </div>
+</nav>
+
+<!-- Catalog header -->
+<div class="catalog-header">
+  <div class="container">
+    <h1>Anillos artesanales hechos a mano</h1>
+    <p>Cada pieza es única, tejida a mano con cuarzos y piedras naturales seleccionadas. Encuentra el anillo que va contigo.</p>
   </div>
 </div>
 
-<!-- Featured product grid -->
-<section class="featured" id="featured">
+<!-- Product catalog -->
+<section class="featured catalog-section" id="catalog">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="left">
-        <div class="eyebrow"><span class="dash"></span> Más vendidos</div>
-        <h2 class="section-title" style="margin-top:6px">Anillos artesanales hechos a mano</h2>
-      </div>
-    </div>
     <div class="product-grid" id="productGrid"></div>
     <div class="product-slider" id="productSlider" style="display:none"></div>
   </div>
 </section>
 
-<!-- Specs -->
-<section id="specs">
+<!-- SEO text -->
+<div class="catalog-seo-text">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="left">
-        <div class="eyebrow"><span class="dash"></span> Calidad de materiales</div>
-        <h2 class="section-title">¿De qué están hechos nuestros anillos?</h2>
-        <p class="section-lede">Materiales honestos, acabados limpios, pensado para el uso diario. Cada pieza incluye una pequeña tarjeta de cuidados.</p>
-      </div>
-    </div>
-    <div class="specs-grid">
-      <div class="spec-card reveal">
-        <span class="num">01</span>
-        <span class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
-        </span>
-        <h4>Material</h4>
-        <p>Alambre de cobre en su núcleo con un revestimiento grueso de polímero que lo protege y lo hace apto para pieles sensibles o personas con alergia al metal.</p>
-      </div>
-      <div class="spec-card reveal">
-        <span class="num">02</span>
-        <span class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 9l9 13 9-13-9-7Z"/><path d="M3 9h18"/><path d="m8 9 4 13 4-13-4-7-4 7Z"/></svg>
-        </span>
-        <h4>Piedra</h4>
-        <p>Nuestros anillos combinan la esencia natural de los cuarzos con el color vibrante de piedras decorativas seleccionadas a mano.</p>
-      </div>
-      <div class="spec-card reveal">
-        <span class="num">03</span>
-        <span class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></svg>
-        </span>
-        <h4>Tallas</h4>
-        <p>De la 5 a la 9, más versión ajustable. Guía de medida incluida en tu pedido.</p>
-      </div>
-      <div class="spec-card reveal">
-        <span class="num">04</span>
-        <span class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a6 6 0 0 0-6 6c0 4 6 12 6 12s6-8 6-12a6 6 0 0 0-6-6Z"/><path d="M12 8v.01"/></svg>
-        </span>
-        <h4>Cuidados</h4>
-        <p>Guarda en su bolsita. Evita cremas y perfume directo. Limpia con paño seco.</p>
-      </div>
-    </div>
+    <p>Nuestros anillos artesanales están elaborados a mano en México con alambre de cobre y revestimiento de polímero, lo que los hace aptos para <strong>pieles sensibles</strong> y personas con alergia al metal. Cada diseño incorpora cuarzos naturales y piedras decorativas seleccionadas una a una en el taller. El tiempo de elaboración es de <strong>3–5 días hábiles</strong>, más envío a domicilio en 2–5 días hábiles a todo México. También realizamos <strong>entregas personales en Puebla y Oaxaca</strong> sin costo adicional. Si tienes dudas sobre tallas o colores, escríbenos por WhatsApp y te asesoramos.</p>
   </div>
-</section>
-
-<!-- Process -->
-<section class="process" id="process">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="left">
-        <div class="eyebrow"><span class="dash"></span> Proceso</div>
-        <h2 class="section-title">Así creamos tu anillo paso a paso</h2>
-      </div>
-    </div>
-    <div class="process-grid">
-      <div class="step reveal">
-        <div class="n">01</div>
-        <h4>Eliges el color</h4>
-        <p>Nos escribes por WhatsApp con tu talla y la combinación que te gustó. Te confirmamos stock el mismo día.</p>
-      </div>
-      <div class="step reveal">
-        <div class="n">02</div>
-        <h4>Lo tejemos</h4>
-        <p>Cortamos el alambre, diseñamos y ensartamos las cuentas una por una. Sin moldes.</p>
-      </div>
-      <div class="step reveal">
-        <div class="n">03</div>
-        <h4>Llega a tu puerta</h4>
-        <p>Tiempo de elaboración 3–5 días hábiles + envío 2–5 días hábiles</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Gallery -->
-<section id="gallery">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="left">
-        <div class="eyebrow"><span class="dash"></span> Galería</div>
-        <h2 class="section-title">En manos de ustedes</h2>
-      </div>
-      <div class="right gal-nav">
-        <span class="gal-counter"><span id="galPage">1</span><span class="sep">/</span><span id="galPages">2</span></span>
-        <button class="arrow" id="galPrev" aria-label="Anterior">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <button class="arrow" id="galNext" aria-label="Siguiente">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
-        </button>
-      </div>
-    </div>
-    <div class="gallery-carousel" id="galleryCarousel">
-      <div class="gallery-track" id="galleryTrack">
-        <div class="g-page">
-          <div class="g g1" data-src="assets/hands-rings.webp"><img src="assets/hands-rings.webp" alt="Dos manos mostrando anillos florales" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-          <div class="g g2" data-src="assets/chest-rings.webp"><img src="assets/chest-rings.webp" alt="Anillos florales usados" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-          <div class="g g3" data-src="assets/hero.webp"><img src="assets/hero.webp" alt="Manos con anillos y pulseras Cadie" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-        </div>
-        <div class="g-page">
-          <div class="g g4" data-src="assets/use-1.webp"><img src="assets/use-1.webp" alt="Manos cruzadas con anillo Margarita" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-          <div class="g g5" data-src="assets/use-2.webp"><img src="assets/use-2.webp" alt="Anillo Margarita sobre azulejos azules" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-          <div class="g g6" data-src="assets/use-3.webp"><img src="assets/use-3.webp" alt="Anillos minimalistas sobre la piel" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-band">
-  <div class="container reveal">
-    <h2 class="h">¿Lista para que sea tuyo?</h2>
-    <p>Estamos aquí para ayudarte. Escríbenos por WhatsApp y te atenderemos.</p>
-    <a class="btn btn-primary btn-lg" href="https://wa.me/522202513945?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20una%20de%20sus%20piezas.%20%C2%BFPodr%C3%ADan%20ayudarme%3F%20%E2%9C%A8" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
-      Pedir por WhatsApp
-    </a>
-  </div>
-</section>
-
-<!-- Instagram feed -->
-<section class="ig-feed">
-  <div class="container">
-    <div class="ig-head reveal">
-      <h2 class="ig-title">Síguenos en <a href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener" style="border-width: 0px">@cadie_jewelry</a></h2>
-    </div>
-    <div class="ig-carousel-wrap reveal">
-      <button class="arrow ig-arrow" id="igPrev" aria-label="Anterior">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-      <div class="ig-carousel" id="igCarousel">
-        <div class="ig-track" id="igTrack">
-          <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-1.webp" alt="Aretes flor dorada Cadie" width="700" height="1050" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-          <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-2.webp" alt="Pulseras y dijes Cadie" width="700" height="1050" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-          <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-3.webp" alt="Aretes y ear cuff con perlas" width="700" height="1050" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-          <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-4.webp" alt="Aretes dorados con cristales" width="700" height="1050" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-                    <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-5.webp" alt="Joyería Cadie" width="700" height="700" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-          <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-6.webp" alt="Joyería Cadie" width="700" height="700" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-        </div>
-      </div>
-      <button class="arrow ig-arrow" id="igNext" aria-label="Siguiente">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
-      </button>
-    </div>
-    <div class="ig-cta reveal">
-      <a class="btn btn-primary btn-lg" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg>
-        Visitar Instagram
-      </a>
-    </div>
-  </div>
-</section>
+</div>
 
 <!-- Footer -->
 <footer>
   <div class="container">
     <div class="foot-bottom">
       <a class="logo" href="/" aria-label="Cadie">
-        <img src="assets/logo.webp" alt="Cadie Joyería" width="685" height="236" loading="lazy" decoding="async" style="height:24px" />
+        <img src="../assets/logo.webp" alt="Cadie Joyería" width="685" height="236" loading="lazy" decoding="async" style="height:24px" />
       </a>
-      <span>© 2026 Cadie Joyería </span>
+      <span>&copy; 2026 Cadie Joyería</span>
       <div class="links">
         <span style="color:inherit; opacity:.85; cursor:default;" aria-disabled="true">Pagos y envío</span>
       </div>
@@ -2025,11 +1917,11 @@
 
 <!-- Floating WhatsApp -->
 <a class="fab" href="https://wa.me/522202513945?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20una%20de%20sus%20piezas.%20%C2%BFPodr%C3%ADan%20ayudarme%3F%20%E2%9C%A8" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
 </a>
 <span class="fab-label">Escríbenos</span>
 
-<!-- Drawer -->
+<!-- Cart drawer -->
 <div class="drawer-backdrop" id="drawerBackdrop"></div>
 <aside class="drawer" id="drawer" aria-label="Carrito">
   <div class="drawer-head">
@@ -2071,7 +1963,7 @@
   </div>
 </div>
 
-<!-- Cart toast — must be before <script> so getElementById finds it at parse time -->
+<!-- Cart toast -->
 <div id="cart-toast" role="status" aria-live="polite">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
   <span id="toast-msg"></span>
@@ -2079,6 +1971,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
   </button>
 </div>
+
 
 <script>
   // Tweaks defaults
@@ -2126,9 +2019,10 @@
   const PRODUCTS = [
     {
       id: 'margarita',
+      slug: 'anillo-margarita',
       name: 'Anillo Margarita',
-      cardImg: 'assets/ring-tray-1.webp',
-      img: 'assets/ring-tray.webp',
+      cardImg: '../assets/ring-tray-1.webp',
+      img: '../assets/ring-tray.webp',
       lede: 'Anillo artesanal de flores con cuentas de en tonos pastel y detalles de chapa de oro. Hecho a la medida, cómodo, y ligero',
       price: 52, priceOld: 69, tag: '-25%',
       colors: [
@@ -2153,9 +2047,10 @@
     },
     {
       id: 'aura',
+      slug: 'anillo-aura',
       name: 'Anillo Aura',
-      cardImg: 'assets/rings-stones-1.webp',
-      img: 'assets/rings-stones.webp',
+      cardImg: '../assets/rings-stones-1.webp',
+      img: '../assets/rings-stones.webp',
       lede: 'Tu cuarzo favorito tejido a mano en un diseño minimalista. Disponible en alambre dorado y plateado.',
       price: 47, priceOld: 52, tag: '-10%',
       colors: [
@@ -2179,9 +2074,10 @@
     },
     {
       id: 'trenza',
+      slug: 'anillo-trenza',
       name: 'Anillo Trenza',
-      cardImg: 'assets/ring-trenza-1.webp',
-      img: 'assets/ring-trenza.webp',
+      cardImg: '../assets/ring-trenza-1.webp',
+      img: '../assets/ring-trenza.webp',
       lede: 'Anillo artesanal minimalista con cuentas metálicas y diseño trenzado, disponible en acabado dorado y plateado. Ligero y minimalista ideal para uso diario.',
       price: 48, priceOld: 56, tag: '-15%',
       colors: [
@@ -2206,9 +2102,10 @@
     },
     {
       id: 'estrellas',
+      slug: 'anillo-tres-estrellas',
       name: 'Anillo Tres Estrellas',
-      cardImg: 'assets/ring-star-1.webp',
-      img: 'assets/ring-star.webp',
+      cardImg: '../assets/ring-star-1.webp',
+      img: '../assets/ring-star.webp',
       lede: 'Anillo artesanal bordado a mano con diseño de tres estrellas. Ligero, cómodo y elaborado en alambre dorado o plateado. Ideal para un estilo minimalista y elegante.',
       price: 47, priceOld: 52, tag: '-10%',
       colors: [
@@ -2275,6 +2172,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           Agregar al carrito
         </button>
+        <a class="product-detail-link" href="/anillos/${p.slug}/">Ver detalles →</a>
       </article>
     `).join('');
 
