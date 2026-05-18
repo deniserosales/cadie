@@ -1837,7 +1837,9 @@
   .tallas-cta { text-align: center; margin-top: 64px; }
   .tallas-cta a { display: inline-block; font-size: 15px; color: var(--olive); font-weight: 600; text-decoration: none; letter-spacing: .03em; }
   .tallas-cta a:hover { text-decoration: underline; color: var(--olive-deep); }
-  tr.popular { background-color: var(--color-highlight, #f5f0e8); font-weight: 500; }
+  tbody tr:nth-child(even) { background-color: #f0ece3; }
+  tbody tr:nth-child(odd)  { background-color: #faf8f4; }
+  tr.half-size td { color: var(--color-muted, #888); font-size: 0.92rem; }
 
 </style>
 
@@ -1935,10 +1937,15 @@
         </thead>
         <tbody>
           <tr><td>4</td><td>14.8</td><td>47</td></tr>
+          <tr class="half-size"><td>4.5</td><td>15.3</td><td>48</td></tr>
           <tr><td>5</td><td>15.7</td><td>49</td></tr>
-          <tr class="popular"><td>6</td><td>16.5</td><td>52</td></tr>
+          <tr class="half-size"><td>5.5</td><td>16.1</td><td>51</td></tr>
+          <tr><td>6</td><td>16.5</td><td>52</td></tr>
+          <tr class="half-size"><td>6.5</td><td>16.9</td><td>53</td></tr>
           <tr><td>7</td><td>17.3</td><td>54</td></tr>
+          <tr class="half-size"><td>7.5</td><td>17.7</td><td>56</td></tr>
           <tr><td>8</td><td>18.2</td><td>57</td></tr>
+          <tr class="half-size"><td>8.5</td><td>18.6</td><td>59</td></tr>
           <tr><td>9</td><td>19.0</td><td>60</td></tr>
           <tr><td>Ajustable</td><td>—</td><td>Flexible entre 6–8</td></tr>
         </tbody>
