@@ -2344,7 +2344,7 @@
             </div>
           </div>`}
           <div class="size-picker">
-            <div class="top"><span class="label">Talla</span><span class="guide">Guía de tallas</span></div>
+            <div class="top"><span class="label">Talla</span><a href="/tallas/" class="guide">Guía de tallas</a></div>
             <div class="sizes" data-p="${i}">
               ${p.sizes.map((s,si)=>`<button data-si="${si}" class="${si===state[i].size?'active':''}" ${p.disabledSizes.includes(s)?'disabled':''}>${s}</button>`).join('')}
             </div>
