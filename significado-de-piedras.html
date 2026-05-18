@@ -392,6 +392,9 @@
     line-height: 1.7;
     margin: 0;
   }
+
+  /* active nav link (matches anillos/index.html convention) */
+  .nav-links a.active::after { transform: scaleX(1); }
 </style>
 </head>
 <body>
@@ -412,10 +415,9 @@
       <img src="assets/logo.webp" alt="Cadie Joyería" width="685" height="236" decoding="async" />
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="index.html#featured">Más vendidos</a>
-      <a href="index.html#process">Proceso</a>
-      <a href="index.html#gallery">Galería</a>
-      <a href="significado-de-piedras.html" class="nav-active">Piedras</a>
+      <a href="/anillos/">Anillos</a>
+      <a href="/significado-de-piedras.html" class="active">Piedras</a>
+      <a href="/sobre-cadie/">Sobre Cadie</a>
     </nav>
     <div class="nav-right">
       <a class="btn btn-primary btn-sm" href="https://wa.me/522202513945?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20una%20de%20sus%20piezas.%20%C2%BFPodr%C3%ADan%20ayudarme%3F%20%E2%9C%A8" target="_blank" rel="noopener">
@@ -433,10 +435,9 @@
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
     <nav class="mobile-nav">
-      <a href="index.html#featured">Más vendidos</a>
-      <a href="index.html#process">Proceso</a>
-      <a href="index.html#gallery">Galería</a>
-      <a href="significado-de-piedras.html" class="nav-active">Piedras</a>
+      <a href="/anillos/">Anillos</a>
+      <a href="/significado-de-piedras.html" style="color:var(--olive); font-weight:600;">Piedras</a>
+      <a href="/sobre-cadie/">Sobre Cadie</a>
     </nav>
     <div class="mobile-menu-foot">
       <a class="btn btn-primary" href="https://wa.me/522202513945?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20una%20de%20sus%20piezas.%20%C2%BFPodr%C3%ADan%20ayudarme%3F%20%E2%9C%A8" target="_blank" rel="noopener">
