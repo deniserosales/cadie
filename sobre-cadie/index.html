@@ -3,31 +3,37 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Cadie Joyería | Anillos Artesanales Hechos a Mano | México</title>
-<meta name="description" content="Anillos artesanales hechos a mano con cuarzos y piedras naturales. Envío a todo México, entregas personales en Puebla y Oaxaca. Pídelos por WhatsApp.">
-<link rel="canonical" href="https://cadiejoyeria.com/">
+<title>Sobre Cadie | Anillos Artesanales Hechos a Mano</title>
+<meta name="description" content="Conoce la historia detrás de Cadie Joyería y cómo hacemos cada anillo artesanal en producciones pequeñas, con procesos cuidados y atención directa.">
+<link rel="canonical" href="https://cadiejoyeria.com/sobre-cadie/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://cadiejoyeria.com/">
-<meta property="og:title" content="Cadie Joyería | Anillos Artesanales Hechos a Mano | México">
-<meta property="og:description" content="Anillos artesanales hechos a mano con cuarzos y piedras naturales. Envío a todo México, entregas personales en Puebla y Oaxaca. Pídelos por WhatsApp.">
+<meta property="og:url" content="https://cadiejoyeria.com/sobre-cadie/">
+<meta property="og:title" content="Sobre Cadie | Anillos Artesanales Hechos a Mano">
+<meta property="og:description" content="Conoce la historia detrás de Cadie Joyería y cómo hacemos cada anillo artesanal en producciones pequeñas, con procesos cuidados y atención directa.">
 <meta property="og:image" content="https://cadiejoyeria.com/assets/hero-banner.webp">
 <meta property="og:locale" content="es_MX">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Cadie Joyería",
-  "url": "https://cadiejoyeria.com",
-  "logo": "https://cadiejoyeria.com/assets/logo.webp",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+52-220-251-3945",
-    "contactType": "customer service"
-  },
-  "sameAs": ["https://www.instagram.com/cadie_jewelry"]
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://cadiejoyeria.com/sobre-cadie/",
+      "name": "Sobre Cadie | Anillos Artesanales Hechos a Mano",
+      "description": "Conoce la historia detrás de Cadie Joyería y cómo hacemos cada anillo artesanal.",
+      "url": "https://cadiejoyeria.com/sobre-cadie/",
+      "isPartOf": { "@id": "https://cadiejoyeria.com/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://cadiejoyeria.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Sobre Cadie", "item": "https://cadiejoyeria.com/sobre-cadie/" }
+      ]
+    }
+  ]
 }
 </script>
-<meta name="google-site-verification" content="lglhc6hUtlvWM-2S2ZDmj4gISnjJeyxHJ9-clw9ceRg" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -1756,6 +1762,62 @@
     text-decoration: none;
   }
   .featured-cta:hover { text-decoration: underline; }
+  /* ===== sobre-cadie ===== */
+  .nav-links a.active::after { transform: scaleX(1); }
+
+  .breadcrumb { background: var(--paper); border-bottom: 1px solid var(--line); padding: 11px 0; font-size: 13px; color: var(--muted); }
+  .breadcrumb a { color: var(--olive); text-decoration: none; font-weight: 500; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb .sep { margin: 0 8px; opacity: .5; }
+
+  .sobre-intro { padding: 64px 0 56px; }
+  .sobre-intro h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: clamp(28px, 3.4vw, 36px);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    color: var(--olive-deep);
+    margin: 0 0 24px;
+    text-wrap: balance;
+  }
+  .sobre-intro p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 0 20px;
+  }
+  .sobre-intro .placeholder-note {
+    font-size: 12px;
+    color: var(--sage);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    border-left: 2px solid var(--sage);
+    padding-left: 12px;
+    margin-top: 32px;
+  }
+
+  .sobre-values { background: var(--paper); padding: 80px 0; }
+  .sobre-values h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: clamp(22px, 2.6vw, 28px);
+    letter-spacing: -.02em;
+    color: var(--olive-deep);
+    margin: 0 0 20px;
+  }
+  .sobre-values p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0;
+  }
+
+  .sobre-cta { padding: 80px 0 100px; text-align: center; }
+  .sobre-cta p { font-size: 15px; color: var(--muted); margin: 0 auto 28px; max-width: 480px; }
+
 </style>
 
 </head>
@@ -1774,18 +1836,14 @@
       <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <a href="/" class="logo" aria-label="Cadie Joyería">
-      <img src="assets/logo.webp" alt="Cadie Joyería" width="685" height="236" decoding="async" />
+      <img src="../assets/logo.webp" alt="Cadie Joyería" width="685" height="236" decoding="async" />
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="/anillos/">Anillos</a>
       <a href="/significado-de-piedras.html">Piedras</a>
-      <a href="/sobre-cadie/">Sobre Cadie</a>
+      <a href="/sobre-cadie/" class="active">Sobre Cadie</a>
     </nav>
     <div class="nav-right">
-      <button class="iconbtn" id="openCart" aria-label="Carrito">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span class="dot" id="cartDot" style="display:none"></span>
-      </button>
       <a class="btn btn-primary btn-sm" href="https://wa.me/522202513945?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20una%20de%20sus%20piezas.%20%C2%BFPodr%C3%ADan%20ayudarme%3F%20%E2%9C%A8" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
         Pedir
@@ -1794,7 +1852,7 @@
   </div>
 </header>
 
-<!-- Mobile nav drawer (shown only at ≤768px via CSS) -->
+<!-- Mobile nav drawer -->
 <div id="mobileMenu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menú de navegación">
   <div class="mobile-menu-panel">
     <button id="menuClose" class="menu-close" aria-label="Cerrar menú">
@@ -1803,7 +1861,7 @@
     <nav class="mobile-nav">
       <a href="/anillos/">Anillos</a>
       <a href="/significado-de-piedras.html">Piedras</a>
-      <a href="/sobre-cadie/">Sobre Cadie</a>
+      <a href="/sobre-cadie/" style="color:var(--olive); font-weight:600;">Sobre Cadie</a>
     </nav>
     <div class="mobile-menu-foot">
       <a class="btn btn-primary" href="https://wa.me/522202513945?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20una%20de%20sus%20piezas.%20%C2%BFPodr%C3%ADan%20ayudarme%3F%20%E2%9C%A8" target="_blank" rel="noopener">
@@ -1814,106 +1872,30 @@
   </div>
 </div>
 
-<!-- Hero -->
-<section class="hero" id="hero">
-  <div class="hero-banner reveal">
-    <img src="assets/hero-banner.webp" alt="Anillos Cadie en la mano" width="1366" height="768" fetchpriority="high" decoding="async" />
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Inicio</a><span class="sep">/</span><span>Sobre Cadie</span>
+  </div>
+</nav>
+
+<!-- Historia -->
+<section class="sobre-intro">
+  <div class="container">
+    <div class="eyebrow"><span class="dash"></span> Nuestra historia</div>
+    <h1>La historia detrás de Cadie</h1>
+    <p>Cada pieza de Cadie Joyería está hecha a mano en producciones pequeñas, cuidando cada detalle desde el primer boceto hasta el acabado final. Nos gusta trabajar con calma e intención, creando anillos simples, cómodos y pensados para acompañarte todos los días.</p>
+    <!-- PLACEHOLDER: añadir historia de origen — Oaxaca/Mixteca, 2-3 párrafos -->
+    <p class="placeholder-note">Historia de origen — próximamente</p>
   </div>
 </section>
 
-<!-- Trust -->
-<div class="trust">
-  <div class="container">
-    <div class="trust-row">
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7v6c0 5 4 9 9 9s9-4 9-9V7l-9-5Z"/></svg>
-        Calidad y durabilidad
-      </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
-        Empaque de regalo
-      </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-4 8-8 8-13a8 8 0 0 0-16 0c0 5 4 9 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
-        Envío a todo MX
-      </div>
-      <div class="cell">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 10V4a2 2 0 0 0-4 0v6"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
-        Hecho a mano
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Featured product grid -->
-<section class="featured" id="featured">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="left">
-        <div class="eyebrow"><span class="dash"></span> Más vendidos</div>
-        <h2 class="section-title" style="margin-top:6px">Anillos artesanales hechos a mano</h2>
-      </div>
-    </div>
-    <div class="product-grid" id="productGrid"></div>
-    <div class="product-slider" id="productSlider" style="display:none"></div>
-    <a href="/anillos/" class="featured-cta">Ver todos los anillos →</a>
-  </div>
-</section>
-
-<!-- Specs -->
-<section id="specs">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="left">
-        <div class="eyebrow"><span class="dash"></span> Calidad de materiales</div>
-        <h2 class="section-title">¿De qué están hechos nuestros anillos?</h2>
-        <p class="section-lede">Materiales honestos, acabados limpios, pensado para el uso diario. Cada pieza incluye una pequeña tarjeta de cuidados.</p>
-      </div>
-    </div>
-    <div class="specs-grid">
-      <div class="spec-card reveal">
-        <span class="num">01</span>
-        <span class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
-        </span>
-        <h4>Material</h4>
-        <p>Alambre de cobre en su núcleo con un revestimiento grueso de polímero que lo protege y lo hace apto para pieles sensibles o personas con alergia al metal.</p>
-      </div>
-      <div class="spec-card reveal">
-        <span class="num">02</span>
-        <span class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 9l9 13 9-13-9-7Z"/><path d="M3 9h18"/><path d="m8 9 4 13 4-13-4-7-4 7Z"/></svg>
-        </span>
-        <h4>Piedra</h4>
-        <p>Nuestros anillos combinan la esencia natural de los cuarzos con el color vibrante de piedras decorativas seleccionadas a mano.</p>
-      </div>
-      <div class="spec-card reveal">
-        <span class="num">03</span>
-        <span class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></svg>
-        </span>
-        <h4>Tallas</h4>
-        <p>De la 5 a la 9, más versión ajustable. Guía de medida incluida en tu pedido.</p>
-      </div>
-      <div class="spec-card reveal">
-        <span class="num">04</span>
-        <span class="icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a6 6 0 0 0-6 6c0 4 6 12 6 12s6-8 6-12a6 6 0 0 0-6-6Z"/><path d="M12 8v.01"/></svg>
-        </span>
-        <h4>Cuidados</h4>
-        <p>Guarda en su bolsita. Evita cremas y perfume directo. Limpia con paño seco.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Process -->
-<section class="process" id="process">
+<!-- Proceso (reutilizado de index.html #process) -->
+<section class="process" id="proceso">
   <div class="container">
     <div class="section-head reveal">
       <div class="left">
         <div class="eyebrow"><span class="dash"></span> Proceso</div>
-        <h2 class="section-title">Así creamos tu anillo paso a paso</h2>
+        <h2 class="section-title">Cómo hacemos cada anillo</h2>
       </div>
     </div>
     <div class="process-grid">
@@ -1930,89 +1912,29 @@
       <div class="step reveal">
         <div class="n">03</div>
         <h4>Llega a tu puerta</h4>
-        <p>Tiempo de elaboración 3–5 días hábiles + envío 2–5 días hábiles</p>
+        <p>Tiempo de elaboración 3–5 días hábiles + envío 2–5 días hábiles.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Gallery -->
-<section id="gallery">
+<!-- Valores -->
+<div class="sobre-values">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="left">
-        <div class="eyebrow"><span class="dash"></span> Galería</div>
-        <h2 class="section-title">En manos de ustedes</h2>
-      </div>
-      <div class="right gal-nav">
-        <span class="gal-counter"><span id="galPage">1</span><span class="sep">/</span><span id="galPages">2</span></span>
-        <button class="arrow" id="galPrev" aria-label="Anterior">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
-        </button>
-        <button class="arrow" id="galNext" aria-label="Siguiente">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
-        </button>
-      </div>
-    </div>
-    <div class="gallery-carousel" id="galleryCarousel">
-      <div class="gallery-track" id="galleryTrack">
-        <div class="g-page">
-          <div class="g g1" data-src="assets/hands-rings.webp"><img src="assets/hands-rings.webp" alt="Dos manos mostrando anillos florales" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-          <div class="g g2" data-src="assets/chest-rings.webp"><img src="assets/chest-rings.webp" alt="Anillos florales usados" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-          <div class="g g3" data-src="assets/hero.webp"><img src="assets/hero.webp" alt="Manos con anillos y pulseras Cadie" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-        </div>
-        <div class="g-page">
-          <div class="g g4" data-src="assets/use-1.webp"><img src="assets/use-1.webp" alt="Manos cruzadas con anillo Margarita" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-          <div class="g g5" data-src="assets/use-2.webp"><img src="assets/use-2.webp" alt="Anillo Margarita sobre azulejos azules" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-          <div class="g g6" data-src="assets/use-3.webp"><img src="assets/use-3.webp" alt="Anillos minimalistas sobre la piel" width="1200" height="1800" loading="lazy" decoding="async" /></div>
-        </div>
-      </div>
-    </div>
+    <div class="eyebrow"><span class="dash"></span> Lo que nos importa</div>
+    <h2>Lo que nos importa</h2>
+    <p>Trabajamos con materiales honestos aptos para uso diario y pieles sensibles. Cada colección es limitada, sin producción en masa. Y cada pedido tiene atención directa — te respondemos nosotras, no un bot.</p>
   </div>
-</section>
+</div>
 
 <!-- CTA -->
-<section class="cta-band">
+<section class="sobre-cta">
   <div class="container reveal">
-    <h2 class="h">¿Lista para que sea tuyo?</h2>
-    <p>Estamos aquí para ayudarte. Escríbenos por WhatsApp y te atenderemos.</p>
+    <p>¿Tienes dudas sobre una pieza? Escríbenos directamente y te ayudamos.</p>
     <a class="btn btn-primary btn-lg" href="https://wa.me/522202513945?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20una%20de%20sus%20piezas.%20%C2%BFPodr%C3%ADan%20ayudarme%3F%20%E2%9C%A8" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
-      Pedir por WhatsApp
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
+      ¿Tienes dudas sobre una pieza? Escríbenos →
     </a>
-  </div>
-</section>
-
-<!-- Instagram feed -->
-<section class="ig-feed">
-  <div class="container">
-    <div class="ig-head reveal">
-      <h2 class="ig-title">Síguenos en <a href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener" style="border-width: 0px">@cadie_jewelry</a></h2>
-    </div>
-    <div class="ig-carousel-wrap reveal">
-      <button class="arrow ig-arrow" id="igPrev" aria-label="Anterior">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-      <div class="ig-carousel" id="igCarousel">
-        <div class="ig-track" id="igTrack">
-          <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-1.webp" alt="Aretes flor dorada Cadie" width="700" height="1050" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-          <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-2.webp" alt="Pulseras y dijes Cadie" width="700" height="1050" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-          <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-3.webp" alt="Aretes y ear cuff con perlas" width="700" height="1050" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-          <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-4.webp" alt="Aretes dorados con cristales" width="700" height="1050" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-                    <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-5.webp" alt="Joyería Cadie" width="700" height="700" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-          <a class="ig-card" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener"><img src="assets/ig-6.webp" alt="Joyería Cadie" width="700" height="700" loading="lazy" decoding="async"/><span class="ig-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg></span></a>
-        </div>
-      </div>
-      <button class="arrow ig-arrow" id="igNext" aria-label="Siguiente">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
-      </button>
-    </div>
-    <div class="ig-cta reveal">
-      <a class="btn btn-primary btn-lg" href="https://instagram.com/cadie_jewelry" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-3a1 1 0 100 2 1 1 0 000-2z"/></svg>
-        Visitar Instagram
-      </a>
-    </div>
   </div>
 </section>
 
@@ -2021,9 +1943,9 @@
   <div class="container">
     <div class="foot-bottom">
       <a class="logo" href="/" aria-label="Cadie">
-        <img src="assets/logo.webp" alt="Cadie Joyería" width="685" height="236" loading="lazy" decoding="async" style="height:24px" />
+        <img src="../assets/logo.webp" alt="Cadie Joyería" width="685" height="236" loading="lazy" decoding="async" style="height:24px" />
       </a>
-      <span>© 2026 Cadie Joyería </span>
+      <span>&copy; 2026 Cadie Joyería</span>
       <div class="links">
         <span style="color:inherit; opacity:.85; cursor:default;" aria-disabled="true">Pagos y envío</span>
       </div>
@@ -2033,676 +1955,50 @@
 
 <!-- Floating WhatsApp -->
 <a class="fab" href="https://wa.me/522202513945?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20interesa%20una%20de%20sus%20piezas.%20%C2%BFPodr%C3%ADan%20ayudarme%3F%20%E2%9C%A8" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
 </a>
 <span class="fab-label">Escríbenos</span>
 
-<!-- Drawer -->
-<div class="drawer-backdrop" id="drawerBackdrop"></div>
-<aside class="drawer" id="drawer" aria-label="Carrito">
-  <div class="drawer-head">
-    <h3>Tu bolsita</h3>
-    <button class="drawer-close" id="closeDrawer" aria-label="Cerrar">
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
-  </div>
-  <div class="drawer-body" id="drawerBody">
-    <div style="text-align:center; padding: 48px 0; color: var(--muted); font-size: 14px;">
-      Tu bolsita está vacía.
-    </div>
-  </div>
-  <div class="drawer-foot" id="drawerFoot" style="display:none">
-    <div class="row"><span>Subtotal</span><span class="total" id="cartTotal">$0</span></div>
-    <a id="checkoutBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
-      Finalizar por WhatsApp
-    </a>
-  </div>
-</aside>
-
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-  </button>
-  <img id="lightboxImg" alt="" loading="lazy" decoding="async" />
-</div>
-
-<!-- Product modal -->
-<div class="drawer-backdrop" id="productModalBackdrop" style="z-index:200"></div>
-<div id="productModal" aria-hidden="true" style="position:fixed; inset:0; z-index:201; display:flex; align-items:center; justify-content:center; padding:24px; opacity:0; pointer-events:none; transition:opacity .35s ease;">
-  <div id="productModalPanel" style="position:relative; width:100%; max-width:1120px; max-height:92vh; overflow-y:auto; background:var(--bg); border-radius:var(--radius-lg); padding:48px 52px; box-shadow:0 30px 80px -20px rgba(61,65,39,.45); transform:translateY(16px); transition:transform .35s cubic-bezier(.22,.61,.36,1);">
-    <button id="closeProductModal" class="drawer-close" aria-label="Cerrar" style="position:absolute; top:18px; right:18px; z-index:2; background:var(--bg);">
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
-    <div id="productModalBody"></div>
-  </div>
-</div>
-
-<!-- Cart toast — must be before <script> so getElementById finds it at parse time -->
-<div id="cart-toast" role="status" aria-live="polite">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
-  <span id="toast-msg"></span>
-  <button id="toast-close" aria-label="Cerrar">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-  </button>
-</div>
-
 <script>
-  // Tweaks defaults
-  const TWEAKS = {
-    "layout": "split",
-    "vibe": "olive"
-  };
+  document.body.setAttribute('data-layout', 'split');
+  document.body.setAttribute('data-vibe', 'olive');
 
-  // Apply persisted tweaks on load
-  document.body.setAttribute('data-layout', TWEAKS.layout);
-  document.body.setAttribute('data-vibe', TWEAKS.vibe);
-
-  // ===== Sticky header shadow =====
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 10);
   });
 
-  // ===== Lift FAB above footer =====
   const fabEl = document.querySelector('.fab');
   const footerEl = document.querySelector('footer');
   if (fabEl && footerEl) {
     const setLift = () => {
-      const h = footerEl.offsetHeight;
-      document.documentElement.style.setProperty('--fab-lift', (h + 16) + 'px');
+      document.documentElement.style.setProperty('--fab-lift', (footerEl.offsetHeight + 16) + 'px');
     };
     setLift();
     window.addEventListener('resize', setLift);
-    const fabIO = new IntersectionObserver(entries => {
+    new IntersectionObserver(entries => {
       entries.forEach(e => fabEl.classList.toggle('lifted', e.isIntersecting));
-    }, { rootMargin: '0px 0px 0px 0px', threshold: 0 });
-    fabIO.observe(footerEl);
+    }, { threshold: 0 }).observe(footerEl);
   }
 
-  // ===== Reveal on scroll =====
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  reveals.forEach(r => io.observe(r));
+  document.querySelectorAll('.reveal').forEach(r =>
+    new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }).observe(r)
+  );
 
-  // ===== Product slider =====
-  const PRODUCTS = [
-    {
-      id: 'margarita',
-      name: 'Anillo Margarita',
-      cardImg: 'assets/ring-tray-1.webp',
-      img: 'assets/ring-tray.webp',
-      lede: 'Anillo artesanal de flores con cuentas de en tonos pastel y detalles de chapa de oro. Hecho a la medida, cómodo, y ligero',
-      price: 52, priceOld: 69, tag: '-25%',
-      colors: [
-        { name: 'Lila', hex: '#C9A7D1' },
-        { name: 'Rosa', hex: '#E8B5BE' },
-        { name: 'Azul cielo', hex: '#B4C8E5' },
-        { name: 'Mantequilla', hex: '#EDE0A6' },
-        { name: 'Durazno', hex: '#EDC5A6' },
-        { name: 'Olivo', hex: '#BAC095' },
-      ],
-      multiColor: true,
-      maxColors: 3,
-      sizes: ['4','5','6','7','8','9','Ajustable'],
-      disabledSizes: [],
-      specs: [
-        { t: 'Material', d: 'Alambre de cobre con chapa de oro. Apto para pieles sensibles.' },
-        { t: 'Piedras', d: 'Cuarzos naturales y piedras decorativas.' },
-        { t: 'Tallas', d: 'Desde la 5 a la 9, también versión ajustable.' },
-        { t: 'Cuidados', d: 'Evita cremas y perfume directo. Limpia con paño seco.' },
-      ],
-      stock: 3,
-    },
-    {
-      id: 'aura',
-      name: 'Anillo Aura',
-      cardImg: 'assets/rings-stones-1.webp',
-      img: 'assets/rings-stones.webp',
-      lede: 'Tu cuarzo favorito tejido a mano en un diseño minimalista. Disponible en alambre dorado y plateado.',
-      price: 47, priceOld: 52, tag: '-10%',
-      colors: [
-        { name: 'Amatista' },
-        { name: 'Cuarzo Rosa' },
-        { name: 'Cuarzo Cherry' },
-        { name: 'Cuarzo Blanco' },
-        { name: 'Ojo de Tigre' },
-        { name: 'Ágata' },
-      ],
-      quartz: true,
-      sizes: ['4','5','6','7','8','9','Ajustable'],
-      disabledSizes: [],
-      specs: [
-        { t: 'Material', d: 'Alambre de cobre con chapa de oro. Antialérgico.' },
-        { t: 'Piedras', d: 'Piedras naturales seleccionadas una por una en el taller.' },
-        { t: 'Tallas', d: 'De la 5 a la 9, más versión ajustable.' },
-        { t: 'Cuidados', d: 'Retira al bañarte. Guarda en su bolsita de algodón.' },
-      ],
-      stock: 5,
-    },
-    {
-      id: 'trenza',
-      name: 'Anillo Trenza',
-      cardImg: 'assets/ring-trenza-1.webp',
-      img: 'assets/ring-trenza.webp',
-      lede: 'Anillo artesanal minimalista con cuentas metálicas y diseño trenzado, disponible en acabado dorado y plateado. Ligero y minimalista ideal para uso diario.',
-      price: 48, priceOld: 56, tag: '-15%',
-      colors: [
-        { name: 'Lila', hex: '#C9A7D1' },
-        { name: 'Rosa', hex: '#E8B5BE' },
-        { name: 'Azul cielo', hex: '#B4C8E5' },
-        { name: 'Mantequilla', hex: '#EDE0A6' },
-        { name: 'Durazno', hex: '#EDC5A6' },
-        { name: 'Olivo', hex: '#BAC095' },
-        { name: 'Dorado', hex: '#D4AF6A' },
-        { name: 'Plateado', hex: '#C7C7C7' },
-      ],
-      sizes: ['4','5','6','7','8','9','Ajustable'],
-      disabledSizes: [],
-      specs: [
-        { t: 'Material', d: 'Alambre de cobre con chapa de oro o plata. Apto para pieles sensibles.' },
-        { t: 'Piedras', d: 'Cuentas metálicas torneadas, hechas a mano una por una.' },
-        { t: 'Tallas', d: 'De la 4 a la 9, más versión ajustable.' },
-        { t: 'Cuidados', d: 'Evita cremas y perfume directo. Limpia con paño seco.' },
-      ],
-      stock: 4,
-    },
-    {
-      id: 'estrellas',
-      name: 'Anillo Tres Estrellas',
-      cardImg: 'assets/ring-star-1.webp',
-      img: 'assets/ring-star.webp',
-      lede: 'Anillo artesanal bordado a mano con diseño de tres estrellas. Ligero, cómodo y elaborado en alambre dorado o plateado. Ideal para un estilo minimalista y elegante.',
-      price: 47, priceOld: 52, tag: '-10%',
-      colors: [
-        { name: 'Dorado', hex: '#D4AF6A' },
-        { name: 'Plateado', hex: '#C7C7C7' },
-      ],
-      sizes: ['4','5','6','7','8','9'],
-      disabledSizes: [],
-      specs: [
-        { t: 'Material', d: 'Alambre en acabado dorado o plateado. Apto para pieles sensibles.' },
-        { t: 'Diseño', d: 'Tres estrellas bordadas a mano, una por una en el taller.' },
-        { t: 'Tallas', d: 'De la 4 a la 9.' },
-        { t: 'Cuidados', d: 'Evita cremas y perfume directo. Limpia con paño seco.' },
-      ],
-      stock: 5,
-    },
-  ];
-
-  // Per-product default color index (most products start at 0; Trenza starts on Plateado)
-  const DEFAULT_COLOR = { trenza: 7 };
-
-  const waHref = (p, color, size, metal) =>
-    `https://wa.me/522202513945?text=${encodeURIComponent(`Hola Cadie, quiero el ${p.name} en ${color}, talla ${size}, metal ${metal}`)}`;
-
-  const specIcons = [
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>',
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 9l9 13 9-13-9-7Z"/><path d="M3 9h18"/></svg>',
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></svg>',
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a6 6 0 0 0-6 6c0 4 6 12 6 12s6-8 6-12a6 6 0 0 0-6-6Z"/></svg>',
-  ];
-
-  const state = PRODUCTS.map(p => ({
-    color: DEFAULT_COLOR[p.id] || 0,
-    selectedColors: p.multiColor ? [DEFAULT_COLOR[p.id] || 0] : null,
-    size: 3,
-    metal: 0
-  }));
-  let current = 0;
-
-  const METALS = [
-    { name: 'Dorado', key: 'dorado' },
-    { name: 'Plateado', key: 'plateado' }
-  ];
-
-  const sliderEl = document.getElementById('productSlider');
-  const gridEl = document.getElementById('productGrid');
-  const dotsEl = document.createElement('div'); // unused, but keep API stable
-  const specsGrid = document.querySelector('#specs .specs-grid');
-
-  function buildCards() {
-    gridEl.innerHTML = PRODUCTS.map((p, i) => `
-      <article class="pcard" data-i="${i}">
-        <div class="img-wrap" data-open="${i}">
-          <span class="pbadge">${p.tag}</span>
-          <img src="${p.cardImg || p.img}" alt="${p.name}" width="800" height="1000" loading="lazy" decoding="async" />
-        </div>
-        <h3>${p.name}</h3>
-        <div class="pprice" style="display:flex; align-items:baseline; gap:10px; margin-bottom:14px;">
-          <span class="now" style="font-family:'Montserrat', sans-serif; font-weight:400; font-size:18px; color:var(--olive-deep); letter-spacing:-.01em;">$${p.price}</span>
-          <span class="was" style="font-size:13px; color:rgba(107,110,84,.55); text-decoration:line-through; text-decoration-thickness:1px; font-weight:500;">$${p.priceOld}</span>
-          <span class="price-tag" style="font-size:10px; background:var(--olive); color:#fff; padding:3px 7px; border-radius:4px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; line-height:1;">${p.tag}</span>
-        </div>
-        <button class="btn btn-primary card-addcart" data-p="${i}" style="width:100%; justify-content:center; margin-top:auto">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          Agregar al carrito
-        </button>
-      </article>
-    `).join('');
-
-    gridEl.querySelectorAll('[data-open]').forEach(el => {
-      el.addEventListener('click', () => openProductModal(+el.dataset.open));
-    });
-    gridEl.querySelectorAll('.card-addcart').forEach(b => b.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const pi = +b.dataset.p, p = PRODUCTS[pi], s = state[pi];
-      const color = p.multiColor
-        ? s.selectedColors.map(i => p.colors[i].name).join(', ')
-        : p.colors[s.color].name;
-      const size = p.sizes[s.size];
-      const ex = cart.find(x => x.id === p.id && x.color === color && x.size === size);
-      if (ex) ex.qty += 1;
-      else cart.push({ id: p.id, name: p.name, color, size, price: p.price, qty: 1, thumb: p.img });
-      renderCart(); openDrawer(); showToast(p.name);
-    }));
-  }
-
-  function buildSlides() {
-    sliderEl.innerHTML = PRODUCTS.map((p, i) => `
-      <div class="product-slide ${i === 0 ? 'active' : ''}" data-i="${i}">
-        ${(() => {
-          const imgs = p.images || [p.img];
-          const showThumbs = imgs.length > 1;
-          return `
-        <div class="featured-media${showThumbs ? ' has-thumbs' : ''}">
-          ${showThumbs ? `
-          <div class="thumb-rail" data-p="${i}">
-            ${imgs.map((src, ti) => `<button class="thumb${ti===0?' active':''}" data-ti="${ti}" data-src="${src}" aria-label="Vista ${ti+1}"><img src="${src}" alt="" width="200" height="200" loading="lazy" decoding="async"/></button>`).join('')}
-          </div>` : ''}
-          <div class="featured-img"><img src="${imgs[0]}" alt="${p.name}" data-main="${i}" width="800" height="800" loading="lazy" decoding="async"/></div>
-        </div>`;
-        })()}
-        <div>
-          <div class="eyebrow"><span class="dash"></span> Pieza destacada</div>
-          <h2 class="section-title" style="margin-top:6px; font-size:22px; font-weight:600;">${p.name}</h2>
-          <p class="section-lede">${p.lede}</p>
-          <div class="price-row" style="display:flex; align-items:baseline; gap:12px; margin:18px 0 24px;">
-            <span class="price" style="font-family:'Montserrat', sans-serif; font-weight:600; font-size:24px; color:var(--olive-deep); letter-spacing:-.01em; line-height:1;">$${p.price}</span>
-            <span class="price-old" style="font-size:15px; color:rgba(107,110,84,.55); text-decoration:line-through; text-decoration-thickness:1px; font-weight:500;">$${p.priceOld}</span>
-            <span class="price-tag" style="font-size:10px; background:var(--olive); color:#fff; padding:3px 8px; border-radius:4px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; line-height:1;">${p.tag}</span>
-          </div>
-          ${p.quartz ? `
-          <div class="quartz-picker">
-            <span class="label">Cuarzo</span>
-            <div class="pills" data-p="${i}">
-              ${p.colors.map((c,ci)=>`<button data-ci="${ci}" class="${ci===state[i].color?'active':''}" aria-label="${c.name}">${c.name}</button>`).join('')}
-            </div>
-          </div>` : `
-          <div class="color-picker">
-            <span class="label">Color${p.multiColor?` <span class="hint">(elige hasta ${p.maxColors})</span>`:''}</span>
-            <div class="swatches${p.multiColor?' multi':''}" data-p="${i}">
-              ${p.colors.map((c,ci)=>{
-                const isSelected = p.multiColor ? state[i].selectedColors.includes(ci) : ci===state[i].color;
-                return `<button data-ci="${ci}" class="${isSelected?'active':''}" style="background-color:${c.hex}" aria-label="${c.name}"></button>`;
-              }).join('')}
-            </div>
-          </div>`}
-          <div class="size-picker">
-            <div class="top"><span class="label">Talla</span><span class="guide">Guía de tallas</span></div>
-            <div class="sizes" data-p="${i}">
-              ${p.sizes.map((s,si)=>`<button data-si="${si}" class="${si===state[i].size?'active':''}" ${p.disabledSizes.includes(s)?'disabled':''}>${s}</button>`).join('')}
-            </div>
-          </div>
-          <div class="metal-picker">
-            <span class="label">Metal</span>
-            <div class="pills metals" data-p="${i}">
-              ${METALS.map((m,mi)=>`<button data-mi="${mi}" class="${mi===state[i].metal?'active':''}" aria-label="${m.name}">${m.name}</button>`).join('')}
-            </div>
-          </div>
-          <div class="actions" style="display:flex; gap:8px; flex-wrap:wrap; row-gap:8px;">
-            <button class="btn btn-primary btn-lg addcart" data-p="${i}">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              Añadir al carrito
-            </button>
-            <a class="btn btn-ghost btn-lg wa-link" data-p="${i}" href="#" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.3c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2 1.4 3.4.2.2 2.4 3.6 5.7 5.1.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4ZM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2Z"/></svg>
-              Pedir por WhatsApp
-            </a>
-          </div>
-          <div class="microcopy" style="margin-top:12px;"><span class="dot"></span> Solo quedan ${p.stock} en <span class="curcolor" data-p="${i}">${p.multiColor ? state[i].selectedColors.map(ci=>p.colors[ci].name.toLowerCase()).join(' · ') : p.colors[state[i].color].name.toLowerCase()}</span></div>
-        </div>
-      </div>
-    `).join('');
-
-    dotsEl.innerHTML = PRODUCTS.map((_,i)=>`<button data-i="${i}" class="${i===0?'active':''}" aria-label="Producto ${i+1}"></button>`).join('');
-
-    sliderEl.querySelectorAll('.thumb-rail').forEach(rail => {
-      rail.querySelectorAll('.thumb').forEach(t => t.addEventListener('click', () => {
-        const main = rail.closest('.featured-media').querySelector('.featured-img img');
-        main.src = t.dataset.src;
-        rail.querySelectorAll('.thumb').forEach(x => x.classList.remove('active'));
-        t.classList.add('active');
-      }));
-    });
-
-    sliderEl.querySelectorAll('.swatches, .quartz-picker .pills').forEach(w => {
-      const isMulti = w.classList.contains('multi');
-      w.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
-        const pi = +w.dataset.p, ci = +b.dataset.ci, p = PRODUCTS[pi];
-        if (isMulti) {
-          const sel = state[pi].selectedColors;
-          const idx = sel.indexOf(ci);
-          if (idx >= 0) {
-            // Don't allow deselecting the last color
-            if (sel.length > 1) {
-              sel.splice(idx, 1);
-              b.classList.remove('active');
-              b.classList.remove('shake');
-            }
-          } else {
-            if (sel.length >= (p.maxColors || 3)) {
-              // Visual feedback: shake the button briefly
-              b.classList.add('shake');
-              setTimeout(() => b.classList.remove('shake'), 400);
-              return;
-            }
-            sel.push(ci);
-            b.classList.add('active');
-          }
-          // Update microcopy with all selected color names
-          const names = sel.map(i => p.colors[i].name.toLowerCase()).join(' · ');
-          w.closest('.product-slide').querySelector('.curcolor').textContent = names;
-        } else {
-          state[pi].color = ci;
-          w.querySelectorAll('button').forEach(x => x.classList.remove('active'));
-          b.classList.add('active');
-          w.closest('.product-slide').querySelector('.curcolor').textContent = p.colors[ci].name.toLowerCase();
-        }
-        updateWaLinks();
-      }));
-    });
-    sliderEl.querySelectorAll('.metals').forEach(w => {
-      w.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
-        const pi = +w.dataset.p, mi = +b.dataset.mi;
-        state[pi].metal = mi;
-        w.querySelectorAll('button').forEach(x => x.classList.remove('active'));
-        b.classList.add('active');
-        updateWaLinks();
-      }));
-    });
-    sliderEl.querySelectorAll('.sizes').forEach(w => {
-      w.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
-        if (b.disabled) return;
-        const pi = +w.dataset.p, si = +b.dataset.si;
-        state[pi].size = si;
-        w.querySelectorAll('button').forEach(x => x.classList.remove('active'));
-        b.classList.add('active');
-        updateWaLinks();
-      }));
-    });
-    sliderEl.querySelectorAll('.addcart').forEach(b => b.addEventListener('click', () => {
-      const pi = +b.dataset.p, p = PRODUCTS[pi], s = state[pi];
-      const color = p.multiColor
-        ? s.selectedColors.map(i => p.colors[i].name).join(', ')
-        : p.colors[s.color].name;
-      const size = p.sizes[s.size];
-      const ex = cart.find(x => x.id === p.id && x.color === color && x.size === size);
-      if (ex) ex.qty += 1;
-      else cart.push({ id: p.id, name: p.name, color, size, price: p.price, qty: 1, thumb: p.img });
-      renderCart(); openDrawer(); showToast(p.name);
-    }));
-    dotsEl.querySelectorAll('button').forEach(b => b.addEventListener('click', () => go(+b.dataset.i)));
-    updateWaLinks();
-  }
-
-  function updateWaLinks() {
-    sliderEl.querySelectorAll('.wa-link').forEach(a => {
-      const pi = +a.dataset.p, p = PRODUCTS[pi], s = state[pi];
-      const colorStr = p.multiColor
-        ? s.selectedColors.map(i => p.colors[i].name).join(', ')
-        : p.colors[s.color].name;
-      a.href = waHref(p, colorStr, p.sizes[s.size], METALS[s.metal].name);
-    });
-  }
-
-  function renderSpecs(i) {
-    if (!specsGrid) return;
-    specsGrid.innerHTML = PRODUCTS[i].specs.map((s, n) => `
-      <div class="spec-card reveal in">
-        <span class="num">0${n+1}</span>
-        <span class="icon">${specIcons[n]}</span>
-        <h4>${s.t}</h4>
-        <p>${s.d}</p>
-      </div>
-    `).join('');
-  }
-
-  function go(i) {
-    current = (i + PRODUCTS.length) % PRODUCTS.length;
-    sliderEl.querySelectorAll('.product-slide').forEach(s => s.classList.toggle('active', +s.dataset.i === current));
-  }
-
-  // ===== Product modal =====
-  const productModal = document.getElementById('productModal');
-  const productModalBackdrop = document.getElementById('productModalBackdrop');
-  const productModalBody = document.getElementById('productModalBody');
-  const productModalPanel = document.getElementById('productModalPanel');
-
-  function openProductModal(i) {
-    go(i);
-    const activeSlide = sliderEl.querySelector('.product-slide.active');
-    if (activeSlide) productModalBody.appendChild(activeSlide);
-    productModalPanel.scrollTop = 0; // always start at image, not previous scroll pos
-    productModalBackdrop.classList.add('open');
-    productModal.setAttribute('aria-hidden', 'false');
-    productModal.style.opacity = '1';
-    productModal.style.pointerEvents = 'auto';
-    productModalPanel.style.transform = 'translateY(0)';
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeProductModal() {
-    productModalBackdrop.classList.remove('open');
-    productModal.style.opacity = '0';
-    productModal.style.pointerEvents = 'none';
-    productModalPanel.style.transform = 'translateY(16px)';
-    productModal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    // Move active slide back to hidden slider so wiring/state remain intact
-    setTimeout(() => {
-      const slide = productModalBody.querySelector('.product-slide');
-      if (slide) sliderEl.appendChild(slide);
-    }, 350);
-  }
-
-  document.getElementById('closeProductModal').addEventListener('click', closeProductModal);
-  productModalBackdrop.addEventListener('click', closeProductModal);
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && productModal.getAttribute('aria-hidden') === 'false') closeProductModal();
-  });
-
-  buildCards();
-  buildSlides();
-  renderSpecs(0);
-
-  // ===== Cart drawer =====
-  const drawer = document.getElementById('drawer');
-  const backdrop = document.getElementById('drawerBackdrop');
-  const drawerBody = document.getElementById('drawerBody');
-  const drawerFoot = document.getElementById('drawerFoot');
-  const cartTotal = document.getElementById('cartTotal');
-  const cartDot = document.getElementById('cartDot');
-  const checkoutBtn = document.getElementById('checkoutBtn');
-
-  function buildCartMsg() {
-    const lines = cart.map(item =>
-      `• ${item.name} — ${item.color} · Talla ${item.size} · Cant. ${item.qty} — $${item.price * item.qty}`
-    ).join('\n');
-    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
-    return `Hola ✨ Me gustaría realizar un pedido de los siguientes:\n\n${lines}\n\nTotal: $${total}`;
-  }
-
-  let cart = [];
-
-  function openDrawer() { drawer.classList.add('open'); backdrop.classList.add('open'); }
-  function closeDrawer() { drawer.classList.remove('open'); backdrop.classList.remove('open'); }
-
-  // ── Toast ──────────────────────────────────────────────────
-  const cartToast = document.getElementById('cart-toast');
-  const toastMsg  = document.getElementById('toast-msg');
-  let toastTimer  = null;
-  function showToast(name) {
-    toastMsg.textContent = name + ' añadido a tu bolsa';
-    clearTimeout(toastTimer);
-    cartToast.classList.remove('hiding');
-    cartToast.classList.add('visible');
-    toastTimer = setTimeout(() => {
-      cartToast.classList.replace('visible', 'hiding');
-      cartToast.addEventListener('transitionend', () =>
-        cartToast.classList.remove('hiding'), { once: true });
-    }, 3000);
-  }
-  document.getElementById('toast-close').addEventListener('click', () => {
-    clearTimeout(toastTimer);
-    cartToast.classList.replace('visible', 'hiding');
-    cartToast.addEventListener('transitionend', () =>
-      cartToast.classList.remove('hiding'), { once: true });
-  });
-  // ───────────────────────────────────────────────────────────
-  document.getElementById('openCart').addEventListener('click', openDrawer);
-  document.getElementById('closeDrawer').addEventListener('click', closeDrawer);
-  backdrop.addEventListener('click', closeDrawer);
-
-  function renderCart() {
-    if (cart.length === 0) {
-      drawerBody.innerHTML = `<div style="text-align:center; padding: 48px 0; color: var(--muted); font-size: 14px;">Tu bolsita está vacía.</div>`;
-      drawerFoot.style.display = 'none';
-      cartDot.style.display = 'none';
-      return;
-    }
-    drawerBody.innerHTML = cart.map((item, i) => `
-      <div class="cart-item">
-        <div class="thumb"><img src="${item.thumb}" alt="" width="64" height="64" loading="lazy" decoding="async"/></div>
-        <div class="cart-info">
-          <div class="cart-top">
-            <h5>${item.name}</h5>
-            <button class="cart-del" data-i="${i}" data-act="x" aria-label="Eliminar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
-            </button>
-          </div>
-          <div class="meta">${item.color} · Talla ${item.size}</div>
-          <div class="cart-bottom">
-            <div class="qty">
-              <button data-i="${i}" data-act="-">−</button>
-              <span>${item.qty}</span>
-              <button data-i="${i}" data-act="+">+</button>
-            </div>
-            <div class="price">$${item.price * item.qty}</div>
-          </div>
-        </div>
-      </div>
-    `).join('');
-    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
-    cartTotal.textContent = '$' + total;
-    checkoutBtn.href = `https://wa.me/522202513945?text=${encodeURIComponent(buildCartMsg())}`;
-    drawerFoot.style.display = 'block';
-    cartDot.style.display = 'block';
-    drawerBody.querySelectorAll('button').forEach(b => {
-      b.addEventListener('click', () => {
-        const i = +b.dataset.i;
-        if (b.dataset.act === '+') cart[i].qty += 1;
-        else if (b.dataset.act === '-') cart[i].qty = Math.max(1, cart[i].qty - 1);
-        else if (b.dataset.act === 'x') cart.splice(i, 1);
-        renderCart();
-      });
-    });
-  }
-
-  // (add-to-cart is handled inside buildSlides per product)
-
-  // ===== Gallery carousel =====
-  (function(){
-    const track = document.getElementById('galleryTrack');
-    if (!track) return;
-    const pages = track.querySelectorAll('.g-page');
-    const total = pages.length;
-    const pageEl = document.getElementById('galPage');
-    const pagesEl = document.getElementById('galPages');
-    const prev = document.getElementById('galPrev');
-    const next = document.getElementById('galNext');
-    if (pagesEl) pagesEl.textContent = total;
-    let idx = 0;
-    function go(i) {
-      idx = (i + total) % total;
-      track.style.transform = `translateX(-${idx * 100}%)`;
-      if (pageEl) pageEl.textContent = idx + 1;
-    }
-    if (prev) prev.addEventListener('click', () => go(idx - 1));
-    if (next) next.addEventListener('click', () => go(idx + 1));
-    go(0);
-  })();
-
-  // ===== Lightbox =====
-  const lb = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lightboxImg');
-  document.querySelectorAll('#galleryCarousel .g').forEach(g => {
-    g.addEventListener('click', () => {
-      lbImg.src = g.dataset.src;
-      lb.classList.add('open');
-    });
-  });
-  document.getElementById('lightboxClose').addEventListener('click', () => lb.classList.remove('open'));
-  lb.addEventListener('click', e => { if (e.target === lb) lb.classList.remove('open'); });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { lb.classList.remove('open'); closeDrawer(); }
-  });
-
-  // ===== Smooth scroll =====
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const id = a.getAttribute('href');
-      if (id.length > 1) {
-        const t = document.querySelector(id);
-        if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 60, behavior: 'smooth' }); }
-      }
-    });
-  });
-
-  // Tweaks panel removed.
-
-  // ===== Mobile hamburger menu =====
   (function () {
-    const menuBtn   = document.getElementById('menuBtn');
+    const menuBtn = document.getElementById('menuBtn');
     const menuClose = document.getElementById('menuClose');
     const mobileMenu = document.getElementById('mobileMenu');
     if (!menuBtn || !mobileMenu) return;
-
-    function openMenu() {
-      mobileMenu.classList.add('open');
-      mobileMenu.setAttribute('aria-hidden', 'false');
-      menuBtn.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeMenu() {
-      mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden', 'true');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-
+    function openMenu() { mobileMenu.classList.add('open'); mobileMenu.setAttribute('aria-hidden','false'); menuBtn.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    function closeMenu() { mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden','true'); menuBtn.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
     menuBtn.addEventListener('click', openMenu);
     menuClose.addEventListener('click', closeMenu);
-
-    // Close when tapping the dark overlay
-    mobileMenu.addEventListener('click', e => {
-      if (e.target === mobileMenu) closeMenu();
-    });
-
-    // Close when a nav link is tapped (scroll then dismiss)
-    mobileMenu.querySelectorAll('.mobile-nav a').forEach(a =>
-      a.addEventListener('click', closeMenu)
-    );
-
-    // Close on Escape
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
-    });
+    mobileMenu.addEventListener('click', e => { if (e.target === mobileMenu) closeMenu(); });
+    mobileMenu.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu(); });
   })();
 </script>
 

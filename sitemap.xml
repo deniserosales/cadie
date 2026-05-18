@@ -12,4 +12,14 @@
     <loc>https://cadiejoyeria.com/significado-de-piedras.html</loc>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://cadiejoyeria.com/sobre-cadie/</loc>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
+    <loc>https://cadiejoyeria.com/tallas/</loc>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 </urlset>
