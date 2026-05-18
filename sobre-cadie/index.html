@@ -1692,8 +1692,8 @@
     /* ── Cart item: larger touch targets on mobile ─────────── */
     .cart-item .qty button { width: 32px !important; height: 32px !important; }
 
-    /* ── Lo que nos importa: prevent card overflow ─────────── */
-    .sobre-values { overflow-x: hidden; }
+    /* ── Lo que nos importa: prevent card overflow + trim bottom ── */
+    .sobre-values { overflow-x: hidden; padding-bottom: 2rem !important; }
     .sobre-values .container {
       width: 100% !important;
       max-width: 100% !important;
@@ -1702,6 +1702,15 @@
       transform: none !important;
       padding: 2rem 1.5rem !important;
       padding-top: 0 !important;
+    }
+
+    /* ── CTA button: prevent overflow, allow wrapping ──────── */
+    .sobre-cta .btn {
+      width: calc(100% - 3rem) !important;
+      max-width: 100% !important;
+      margin: 0 1.5rem !important;
+      white-space: normal !important;
+      text-align: center !important;
     }
   }
 
