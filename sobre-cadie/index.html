@@ -1691,6 +1691,18 @@
 
     /* ── Cart item: larger touch targets on mobile ─────────── */
     .cart-item .qty button { width: 32px !important; height: 32px !important; }
+
+    /* ── Lo que nos importa: prevent card overflow ─────────── */
+    .sobre-values { overflow-x: hidden; }
+    .sobre-values .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      transform: none !important;
+      padding: 2rem 1.5rem !important;
+      padding-top: 0 !important;
+    }
   }
 
   /* Two columns preserved on very narrow phones (≤400px) for 2×2 layout */
